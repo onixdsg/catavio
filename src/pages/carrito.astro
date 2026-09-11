@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import shop from '../data/shop.json';
+---
+
+
+<BaseLayout
+  title="Carrito de compras | Tienda"
+  description="Revisá tu carrito de compras y enviá tu pedido por WhatsApp."
+>
+
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-10">
+    <h1 class="text-3xl font-extrabold tracking-tight text-slate-900 mb-6">Carrito de compras</h1>
+
+    <div
+      data-cart-container
+      class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-6 divide-y divide-slate-100"
+    >
+    </div>
+
+    <div class="mt-8">
+      <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 space-y-4">
+        <div class="flex items-center justify-between text-lg">
+          <span class="font-semibold text-slate-700">Total</span>
+          <span data-cart-total class="text-2xl font-extrabold text-brand-700">$0</span>
+        </div>
+        <p class="text-sm text-slate-500">
+          {shop.nota_envio}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+          <a
+            href="/productos/"
+            class="flex-1 text-center px-6 py-3.5 rounded-lg border border-slate-200 text-slate-700 font-semibold hover:bg-slate-100 transition"
+          >
+            Seguir comprando
+          </a>
+          <button
+            type="button"
+            data-checkout-wa
+            class="flex-1 flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2a9.9 9.9 0 00-8.43 15.06L2 22l5.08-1.57A9.92 9.92 0 1012.04 2z" />
+            </svg>
+            Enviar pedido por WhatsApp
+          </button>
+          <button
+            type="button"
+            data-clear-cart
+            class="flex items-center justify-center gap-2 px-6 py-3.5 rounded-lg border border-slate-200 text-red-500 font-medium text-sm hover:bg-slate-50 transition"
+          >
+            Vaciar carrito
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</BaseLayout>

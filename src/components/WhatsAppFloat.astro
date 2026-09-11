@@ -1,0 +1,15 @@
+---
+import shop from '../data/shop.json';
+---
+
+<a
+  href={`https://wa.me/${shop.whatsapp.replace(/[^\d]/g, '')}`}
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
+  class="fixed bottom-5 right-5 z-50 w-14 h-14 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white grid place-items-center shadow-lg shadow-emerald-500/30 transition hover:scale-105"
+>
+  <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" viewBox="0 0 24 24" fill="currentColor">
+    <path d="M12.04 2a9.9 9.9 0 00-8.43 15.06L2 22l5.08-1.57A9.92 9.92 0 1012.04 2zm.01 2a7.9 7.9 0 11-4.04 14.64l-.36-.21-2.98.92.92-2.9-.24-.37A7.9 7.9 0 0112.05 4zm-3.34 4.15c-.25 0-.5.08-.72.27-.4.35-.9 1.1-.9 2.25 0 1.15.67 2.4 1.5 3.18.47.45 2 1.82 4.1 2.42 1.7.49 2.23.39 2.63.37.42-.02 1.25-.5 1.45-1.03.2-.52.27-.94.3-1-.03-.07-.12-.19-.25-.3l-1.04-.53c-.4-.2-.73-.3-.98.07-.27.4-.62.87-.77.97-.15.12-.32.13-.6.02-.15-.06-.72-.27-1.38-.85-.51-.45-.85-1-1-.96l.5-.9.35-.35.22-.58c-.02-.03-.06-.08-.06-.1l-.6-.93c-.31-.5-.63-.37-.88-.37z" />
+  </svg>
+</a>

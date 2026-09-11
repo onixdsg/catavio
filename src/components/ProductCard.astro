@@ -1,0 +1,90 @@
+---
+import shop from '../data/shop.json';
+
+export interface Props {
+  title: string;
+  slug: string;
+  precio: number;
+  imagen: string;
+  categoria: string;
+  subcategoria?: string;
+  destacado?: boolean;
+  stock?: string;
+}
+
+const {
+  title,
+  slug,
+  precio,
+  imagen,
+  categoria,
+  subcategoria = '',
+  destacado = false,
+  stock = 'disponible',
+} = Astro.props;
+
+const fmt = new Intl.NumberFormat('es-AR', {
+  style: 'currency',
+  currency: shop.moneda,
+  maximumFractionDigits: 2,
+});
+---
+
+<article class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-xl hover:shadow-slate-200/60 hover:-translate-y-0.5 transition flex flex-col">
+  <a href={`/productos/${slug}/`} class="relative block aspect-square overflow-hidden bg-slate-100">
+    <img
+      src={imagen}
+      alt={title}
+      loading="lazy"
+      class="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+    />
+    {
+      destacado && (
+        <span class="absolute top-3 left-3 bg-amber-400 text-amber-900 text-xs font-bold px-2.5 py-1 rounded-full shadow-sm">
+          Destacado
+        </span>
+      )
+    }
+    {
+      stock === 'sin_stock' && (
+        <span class="absolute top-3 right-3 bg-slate-900/80 text-white text-xs font-semibold px-2.5 py-1 rounded-full">
+          Sin stock
+        </span>
+      )
+    }
+  </a>
+
+  <div class="p-4 flex flex-col flex-1">
+    <p class="text-xs uppercase tracking-wide text-slate-400 font-medium">
+      {categoria}{subcategoria ? ` · ${subcategoria}` : ''}
+    </p>
+    <a
+      href={`/productos/${slug}/`}
+      class="mt-1 font-semibold text-slate-800 line-clamp-2 hover:text-brand-600 transition"
+    >
+      {title}
+    </a>
+    <p class="mt-2 text-lg font-bold text-slate-900">{fmt.format(precio)}</p>
+    <div class="mt-3 pt-3 border-t border-slate-100">
+      {
+        stock === 'sin_stock' ? (
+          <span class="block w-full text-center px-4 py-2 rounded-lg bg-slate-100 text-slate-400 font-medium text-sm">
+            Sin stock
+          </span>
+        ) : (
+          <button
+            type="button"
+            data-add-to-cart
+            data-slug={slug}
+            data-title={title}
+            data-precio={String(precio)}
+            data-imagen={imagen}
+            class="w-full px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm transition active:scale-95"
+          >
+            Agregar al carrito
+          </button>
+        )
+      }
+    </div>
+  </div>
+</article>

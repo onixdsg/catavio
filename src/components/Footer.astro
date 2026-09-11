@@ -1,0 +1,84 @@
+---
+import shop from '../data/shop.json';
+---
+
+<footer class="bg-slate-900 text-slate-300">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <div class="flex items-center gap-2">
+        <span class="w-9 h-9 rounded-xl bg-brand-600 text-white grid place-items-center font-extrabold text-lg">
+          {shop.empresa.charAt(0)}
+        </span>
+        <span class="font-extrabold text-lg text-white">{shop.empresa}</span>
+      </div>
+      <p class="mt-4 text-sm leading-relaxed text-slate-400">{shop.descripcion}</p>
+    </div>
+
+    <div>
+      <h3 class="text-white font-semibold mb-4">Navegación</h3>
+      <ul class="space-y-2 text-sm">
+        <li><a href="/" class="hover:text-white transition">Inicio</a></li>
+        <li><a href="/productos/" class="hover:text-white transition">Productos</a></li>
+        <li><a href="/carrito/" class="hover:text-white transition">Carrito de compras</a></li>
+        <li><a href="/contacto/" class="hover:text-white transition">Contacto</a></li>
+        <li><a href="/admin/" class="hover:text-white transition">Panel de administración</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white font-semibold mb-4">Contacto</h3>
+      <ul class="space-y-2 text-sm">
+        {
+          shop.whatsapp && (
+            <li>
+              <span class="text-slate-500">WhatsApp:</span>{' '}
+              <a
+                href={`https://wa.me/${shop.whatsapp.replace(/[^\d]/g, '')}`}
+                target="_blank"
+                rel="noopener"
+                class="hover:text-white transition"
+              >
+                {shop.whatsapp}
+              </a>
+            </li>
+          )
+        }
+        {
+          shop.email && (
+            <li>
+              <span class="text-slate-500">Email:</span>{' '}
+              <a href={`mailto:${shop.email}`} class="hover:text-white transition">
+                {shop.email}
+              </a>
+            </li>
+          )
+        }
+        {shop.domicilio && <li>{shop.domicilio}</li>}
+        {shop.horarios && <li class="text-slate-400">{shop.horarios}</li>}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="text-white font-semibold mb-4">Redes</h3>
+      <ul class="space-y-2 text-sm">
+        <li>
+          <a href="/productos/" class="hover:text-white transition">
+            Ver el catálogo completo
+          </a>
+        </li>
+        <li>
+          <a href="/contacto/" class="hover:text-white transition">
+            Escribinos por WhatsApp
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="border-t border-slate-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-5 text-sm text-slate-500 flex flex-wrap items-center justify-between gap-2">
+      <p>© {new Date().getFullYear()} {shop.empresa}. Todos los derechos reservados.</p>
+      <p>Sitio web estático · Hecho con ♥</p>
+    </div>
+  </div>
+</footer>

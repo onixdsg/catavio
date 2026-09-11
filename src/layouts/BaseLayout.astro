@@ -1,0 +1,60 @@
+---
+import shop from '../data/shop.json';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import WhatsAppFloat from '../components/WhatsAppFloat.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${shop.empresa} | ${shop.eslogan}`,
+  description = shop.descripcion,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title}</title>
+
+    <script is:inline define:vars={{ shop }}>
+      window.SHOP = shop;
+    </script>
+  </head>
+  <body class="bg-white text-slate-900 flex flex-col min-h-screen">
+    <Header />
+    <main class="flex-1">
+      <slot />
+    </main>
+    <Footer />
+    <WhatsAppFloat />
+
+    <script type="module">
+      import { bindCartUI, updateBadge, renderCart } from '../scripts/cart';
+
+      updateBadge();
+      bindCartUI(document);
+      window.addEventListener('cart:changed', () => updateBadge());
+      renderCart();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "empresa": "Mi Empresa",
+  "eslogan": "Calidad y confianza, al alcance de un clic.",
+  "descripcion": "Contanos en 2 o 3 líneas qué hace tu empresa, qué vendés y por qué tus clientes deberían elegirte. Editalo desde el panel en /admin.",
+  "whatsapp": "5491100000000",
+  "email": "contacto@miempresa.com",
+  "domicilio": "Av. Siempre Viva 123, Ciudad",
+  "horarios": "Lunes a Viernes de 9:00 a 18:00",
+  "moneda": "ARS",
+  "simbolo": "$",
+  "nota_envio": "Forma de pago y envío se coordinan por WhatsApp al confirmar tu pedido.",
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  }
+}

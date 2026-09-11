@@ -1,0 +1,95 @@
+---
+import shop from '../data/shop.json';
+
+const current = Astro.url.pathname;
+const links = [
+  { href: '/', label: 'Inicio' },
+  { href: '/productos/', label: 'Productos' },
+  { href: '/contacto/', label: 'Contacto' },
+];
+---
+
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 gap-4">
+    <a href="/" class="flex items-center gap-2 shrink-0">
+      <span class="w-9 h-9 rounded-xl bg-brand-600 text-white grid place-items-center font-extrabold text-lg">
+        {shop.empresa.charAt(0)}
+      </span>
+      <span class="font-extrabold text-lg tracking-tight text-slate-900 hidden sm:block">
+        {shop.empresa}
+      </span>
+    </a>
+
+    <nav class="hidden md:flex items-center gap-1">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class:list={[
+              'px-4 py-2 rounded-lg text-sm font-medium transition',
+              current === l.href || (l.href !== '/' && current.startsWith(l.href))
+                ? 'bg-brand-50 text-brand-700'
+                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+            ]}
+            aria-current={current === l.href ? 'page' : undefined}
+          >
+            {l.label}
+          </a>
+        ))
+      }
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a
+        href="/carrito/"
+        class="relative flex items-center gap-2 px-3 sm:px-4 py-2 rounded-lg text-sm font-semibold text-white bg-brand-600 hover:bg-brand-700 transition"
+        aria-label="Ver carrito"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+        </svg>
+        <span class="hidden sm:inline">Carrito</span>
+        <span
+          data-cart-count
+          class="hidden absolute -top-2 -right-2 min-w-[1.4rem] h-[1.4rem] px-1 grid place-items-center rounded-full bg-red-500 text-white text-xs font-bold"
+        >0</span>
+      </a>
+
+      <button
+        type="button"
+        data-mobile-menu
+        class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100"
+        aria-label="Abrir menú"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <nav data-mobile-panel class="md:hidden hidden border-t border-slate-200 bg-white px-4 pb-4">
+    {
+      links.map((l) => (
+        <a
+          href={l.href}
+          class:list={[
+            'block px-3 py-3 rounded-lg font-medium mt-1',
+            current === l.href ? 'bg-brand-50 text-brand-700' : 'text-slate-700 hover:bg-slate-100',
+          ]}
+        >
+          {l.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>
+
+<script>
+  const btn = document.querySelector('[data-mobile-menu]');
+  const panel = document.querySelector('[data-mobile-panel]');
+  btn?.addEventListener('click', () => {
+    const open = panel?.classList.toggle('hidden') === false;
+    btn.setAttribute('aria-expanded', String(open));
+  });
+</script>

@@ -1,0 +1,136 @@
+# Decap CMS: panel de administración de la tienda
+
+backend:
+  name: git-gateway
+  branch: main
+  accept_roles:
+    - admin
+    - editor
+
+# Las fotos que suba el cliente se guardan acá y se publican en /uploads/...
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+# Un producto destacado se muestra en la portada automáticamente
+collections:
+  - name: "config"
+    label: "Configuración"
+    files:
+      - name: "shop"
+        label: "Datos de la tienda"
+        file: "src/data/shop.json"
+        description: "Nombre de la empresa, WhatsApp, email y datos de contacto."
+        fields:
+          - { label: "Nombre de la empresa", name: "empresa", widget: "string" }
+          - { label: "Eslogan", name: "eslogan", widget: "string" }
+          - {
+              label: "Descripción corta (se muestra en el pie de página)",
+              name: "descripcion",
+              widget: "text",
+              required: false,
+            }
+          - {
+              label: "Número de WhatsApp (con código de país, sin + ni espacios, ej: 5491100000000)",
+              name: "whatsapp",
+              widget: "string",
+            }
+          - { label: "Email", name: "email", widget: "string", required: false }
+          - { label: "Domicilio", name: "domicilio", widget: "string", required: false }
+          - { label: "Horarios", name: "horarios", widget: "string", required: false }
+          - {
+              label: "Moneda (código: ARS, USD, EUR...)",
+              name: "moneda",
+              widget: "string",
+            }
+          - { label: "Símbolo de moneda", name: "simbolo", widget: "string" }
+          - {
+              label: "Nota de envío (aparece al confirmar el pedido)",
+              name: "nota_envio",
+              widget: "text",
+              required: false,
+            }
+          - label: "Redes sociales"
+            name: "redes"
+            widget: "object"
+            fields:
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+
+  - name: "categorias"
+    label: "Categorías"
+    label_singular: "Categoría"
+    identifier_field: "nombre"
+    folder: "src/content/categorias"
+    create: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    summary: "{{nombre}}"
+    fields:
+      - { label: "Nombre de la categoría", name: "nombre", widget: "string" }
+      - {
+          label: "Subcategorías",
+          name: "subcategorias",
+          widget: "list",
+          allow_add: true,
+          required: false,
+          field: { label: "Subcategoría", name: "sub", widget: "string" },
+        }
+      - { label: "Descripción", name: "descripcion", widget: "text", required: false }
+
+  - name: "productos"
+    label: "Productos"
+    label_singular: "Producto"
+    identifier_field: "title"
+    folder: "src/content/productos"
+    create: true
+    delete: true
+    slug: "{{slug}}"
+    format: "frontmatter"
+    summary: "{{title}} — ${{precio}}"
+    fields:
+      - { label: "Nombre del producto", name: "title", widget: "string" }
+      - {
+          label: "Categoría",
+          name: "categoria",
+          widget: "relation",
+          collection: "categorias",
+          search_fields: ["nombre"],
+          value_field: "{{slug}}",
+          display_fields: ["nombre"],
+        }
+      - { label: "Subcategoría", name: "subcategoria", widget: "string", required: false }
+      - {
+          label: "Precio",
+          name: "precio",
+          widget: "number",
+          value_type: "float",
+          min: 0,
+        }
+      - {
+          label: "Destacado en la portada",
+          name: "destacado",
+          widget: "boolean",
+          default: false,
+          required: false,
+        }
+      - {
+          label: "Stock",
+          name: "stock",
+          widget: "select",
+          default: "disponible",
+          options:
+            - { label: "Disponible", value: "disponible" }
+            - { label: "Sin stock", value: "sin_stock" },
+        }
+      - { label: "Foto principal", name: "imagen", widget: "image" }
+      - {
+          label: "Galería de fotos (opcional)",
+          name: "galeria",
+          widget: "list",
+          required: false,
+          allow_add: true,
+          collapsed: true,
+          field: { label: "Foto", name: "foto", widget: "image" },
+        }
+      - { label: "Descripción corta (aparece en la lista)", name: "descripcion", widget: "text", required: false }
+      - { label: "Descripción completa", name: "body", widget: "markdown", required: false }
