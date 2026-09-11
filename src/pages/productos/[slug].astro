@@ -23,7 +23,6 @@ const {
   imagen,
   galeria = [],
   descripcion = '',
-  body,
 } = product.data;
 
 const { Content } = await render(product);
@@ -254,42 +253,53 @@ const imagenes = [imagen, ...galeria.filter((g) => g !== imagen)];
   </script>
 
   <script>
-    const main = document.querySelector('[data-gallery-main]');
-    document.querySelectorAll('[data-gallery-thumb]').forEach((thumb) => {
-      thumb.addEventListener('click', () => {
-        if (!main) return;
-        main.src = thumb.dataset.src;
-        document.querySelectorAll('[data-gallery-thumb]').forEach((t) => {
-          t.classList.toggle('border-brand-600', t === thumb);
-          t.classList.toggle('border-slate-200', t !== thumb);
+    const main = document.querySelector<HTMLImageElement>('[data-gallery-main]');
+    document
+      .querySelectorAll<HTMLButtonElement>('[data-gallery-thumb]')
+      .forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+          if (!main) return;
+          main.src = thumb.dataset.src ?? main.src;
+          document
+            .querySelectorAll<HTMLButtonElement>('[data-gallery-thumb]')
+            .forEach((t) => {
+              t.classList.toggle('border-brand-600', t === thumb);
+              t.classList.toggle('border-slate-200', t !== thumb);
+            });
         });
       });
-    });
   </script>
 
-  <script type="module">
+  <script>
     import { add, checkoutWhatsApp } from '../../scripts/cart';
 
-    const input = document.querySelector('[data-qty-detail-input]');
-    const qtyValue = () => Math.max(1, Math.min(999, Number(input?.value || 1)));
+    const input = document.querySelector<HTMLInputElement>(
+      '[data-qty-detail-input]'
+    );
+    const qtyValue = () =>
+      Math.max(1, Math.min(999, Number(input?.value || 1)));
 
-    document.querySelectorAll('[data-qty-detail]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        if (!input) return;
-        const n = qtyValue();
-        input.value = String(btn.dataset.action === 'inc' ? n + 1 : n - 1);
+    document
+      .querySelectorAll<HTMLButtonElement>('[data-qty-detail]')
+      .forEach((btn) => {
+        btn.addEventListener('click', () => {
+          if (!input) return;
+          const n = qtyValue();
+          input.value = String(
+            btn.dataset.action === 'inc' ? n + 1 : n - 1
+          );
+        });
       });
-    });
 
     input?.addEventListener('change', () => {
-      input.value = String(qtyValue());
+      if (input) input.value = String(qtyValue());
     });
 
-    const pushToCart = (btn, openWa = false) => {
+    const pushToCart = (btn: HTMLElement, openWa = false) => {
       const n = qtyValue();
       for (let i = 0; i < n; i++) {
-        add(btn.dataset.slug, {
-          title: btn.dataset.title,
+        add(btn.dataset.slug ?? '', {
+          title: btn.dataset.title ?? '',
           precio: Number(btn.dataset.precio || 0),
           imagen: btn.dataset.imagen || '',
         });
@@ -297,7 +307,15 @@ const imagenes = [imagen, ...galeria.filter((g) => g !== imagen)];
       if (openWa) setTimeout(checkoutWhatsApp, 250);
     };
 
-    document.querySelector('[data-add-detail]')?.addEventListener('click', (e) => pushToCart(e.currentTarget, false));
-    document.querySelector('[data-buy-detail]')?.addEventListener('click', (e) => pushToCart(e.currentTarget, true));
+    document
+      .querySelector('[data-add-detail]')
+      ?.addEventListener('click', (e) =>
+        pushToCart(e.currentTarget as HTMLElement, false)
+      );
+    document
+      .querySelector('[data-buy-detail]')
+      ?.addEventListener('click', (e) =>
+        pushToCart(e.currentTarget as HTMLElement, true)
+      );
   </script>
 </BaseLayout>

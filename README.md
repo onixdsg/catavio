@@ -1,43 +1,62 @@
-# Astro Starter Kit: Minimal
+# Tienda web estática (Astro + Decap CMS + Netlify)
 
-```sh
-npm create astro@latest -- --template minimal
+Sitio de catálogo con carrito de compras que se envía por WhatsApp. Sin backend ni costos mensuales. El cliente administra productos, fotos, precios y categorías desde un panel web (`/admin`).
+
+## Funcionalidades
+
+- **Inicio:** producto destacado, sección "sobre nosotros", características del servicio.
+- **Productos:** catálogo completo con búsqueda, filtro por categoría, subcategoría y rango de precio, ordenamiento y carga incremental ("cargar más"). Botón de agregar al carrito directo.
+- **Detalle de producto:** galería de fotos, descripción completa (Markdown), selector de cantidad, "Agregar al carrito" y "Comprar por WhatsApp" directo, productos relacionados.
+- **Carrito:** cantidades, subtotales y total, botón "Enviar pedido por WhatsApp". El pedido llega pre-armado con cada ítem, cantidad, precio y total. Pago y envío se coordinan por WhatsApp.
+- **Contacto:** datos de la empresa y formulario que abre WhatsApp con el mensaje.
+- **Panel de administración (`/admin`):** el cliente edita productos, categorías y datos de la tienda sin tocar código.
+
+## Stack
+
+| Herramienta | Uso |
+|---|---|
+| Astro 7 | Framework estático (SSG) |
+| Tailwind CSS v4 | Estilos |
+| Decap CMS | Panel web para el cliente |
+| Netlify | Hosting + autenticación del CMS (gratis) |
+| JavaScript (vanilla) | Carrito: localStorage + WhatsApp |
+
+Los datos de la tienda (WhatsApp, email, moneda, etc.) están en `src/data/shop.json`. Los productos viven como Markdown en `src/content/productos/` (schema en `src/content.config.ts`).
+
+## Desarrollo local
+
+```bash
+npm install
+npm run dev          # o: astro dev --background / astro dev logs / astro dev stop
+npm run build        # genera la carpeta dist/
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Generar productos de demo
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+node scripts/seed.mjs
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+Crea 98 productos y 7 categorías con imágenes placeholder (reemplazables desde el panel).
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Despliegue en Netlify
 
-Any static assets, like images, can be placed in the `public/` directory.
+La configuración ya está en `netlify.toml` (build: `npm run build`, publish: `dist`).
 
-## 🧞 Commands
+1. Subí el proyecto a un repositorio de GitHub (`git init` ya hecho; el branch se llama `main`).
+2. En [netlify.com](https://netlify.com) → **Add new site → Import an existing project** → elegí tu repo.
+   Build command: `npm run build` — Publish directory: `dist` (auto detecta desde `netlify.toml`).
+3. Activá **Identity** (en *Site → Identity → Enable Identity*).
+4. Activá **Git Gateway** (en *Site → Settings → Access control → Git Gateway → Enable*).
+5. Invitá al cliente por email desde *Identity → Invite users* con rol **Editor**.
+6. El cliente entra a `tusitio.netlify.app/admin`, acepta la invitación y ya puede editar el catálogo.
 
-All commands are run from the root of the project, from a terminal:
+> Alternativa: **Vercel** también funciona cambiando el backend de Decap CMS a OAuth de GitHub (más engorroso; con Netlify el login es por email y viene integrado).
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+## Datos editables desde el panel
 
-## 👀 Want to learn more?
+- **Datos de la tienda:** nombre, WhatsApp, email, domicilio, horarios, moneda, nota de envío.
+- **Categorías:** nombre + lista de subcategorías.
+- **Productos:** nombre, categoría, subcategoría, precio, destacado (sí/no), stock (disponible/sin stock), foto principal, galería, descripción corta y completa.
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Agregar un producto con la casilla "Destacado en la portada" activada lo muestra automáticamente en el hero del inicio.

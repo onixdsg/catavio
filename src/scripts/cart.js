@@ -180,7 +180,6 @@ export function renderCart() {
   const container = document.querySelector('[data-cart-container]');
   if (!container) return;
   const { items: cart, total } = summary();
-  const shop = window.SHOP || {};
 
   if (cart.length === 0) {
     container.innerHTML = `

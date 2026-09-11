@@ -19,7 +19,7 @@ export async function getProducts() {
 export async function getCategories() {
   const cats = await getCollection('categorias');
   return [...cats].sort((a, b) =>
-    a.data.title.localeCompare(b.data.title, 'es')
+    a.data.nombre.localeCompare(b.data.nombre, 'es')
   );
 }
 
@@ -27,7 +27,7 @@ export async function buildCategoryMap() {
   const cats = await getCollection('categorias');
   const map = new Map<string, string>();
   for (const c of cats) {
-    map.set(c.id, c.data.title);
+    map.set(c.id, c.data.nombre);
   }
   return map;
 }

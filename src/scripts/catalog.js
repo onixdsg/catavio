@@ -1,4 +1,4 @@
-import { formatPrice, add } from './cart.js';
+import { formatPrice } from './cart.js';
 
 const PAGE_SIZE = 12;
 
