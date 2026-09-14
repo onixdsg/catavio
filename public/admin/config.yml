@@ -22,6 +22,11 @@ collections:
         description: "Nombre de la empresa, WhatsApp, email y datos de contacto."
         fields:
           - { label: "Nombre de la empresa", name: "empresa", widget: "string" }
+          - {
+              label: "Abreviatura (sigla que se muestra en el logo, ej: Cs)",
+              name: "abreviatura",
+              widget: "string",
+            }
           - { label: "Eslogan", name: "eslogan", widget: "string" }
           - {
               label: "Descripción corta (se muestra en el pie de página)",
