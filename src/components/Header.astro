@@ -1,6 +1,4 @@
 ---
-import shop from '../data/shop.json';
-
 const current = Astro.url.pathname;
 const links = [
   { href: '/', label: 'Inicio' },
@@ -9,15 +7,14 @@ const links = [
 ];
 ---
 
-<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-slate-200">
+<header class="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-800">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between h-16 gap-4">
-    <a href="/" class="flex items-center gap-2 shrink-0">
-      <span class="w-9 h-9 rounded-xl bg-brand-600 text-white grid place-items-center font-extrabold text-lg">
-        {shop.abreviatura}
-      </span>
-      <span class="font-extrabold text-lg tracking-tight text-slate-900 hidden sm:block">
-        {shop.empresa}
-      </span>
+    <a href="/" class="flex items-center gap-2 shrink-0" aria-label="Ir al inicio">
+      <img
+        src="/images/logo.jpeg"
+        alt="Catavio Sport"
+        class="h-11 w-auto object-contain rounded"
+      />
     </a>
 
     <nav class="hidden md:flex items-center gap-1">
@@ -28,8 +25,8 @@ const links = [
             class:list={[
               'px-4 py-2 rounded-lg text-sm font-medium transition',
               current === l.href || (l.href !== '/' && current.startsWith(l.href))
-                ? 'bg-brand-50 text-brand-700'
-                : 'text-slate-600 hover:text-slate-900 hover:bg-slate-100',
+                ? 'bg-white text-slate-900'
+                : 'text-slate-300 hover:text-white hover:bg-white/10',
             ]}
             aria-current={current === l.href ? 'page' : undefined}
           >
@@ -51,14 +48,14 @@ const links = [
         <span class="hidden sm:inline">Carrito</span>
         <span
           data-cart-count
-          class="hidden absolute -top-2 -right-2 min-w-[1.4rem] h-[1.4rem] px-1 grid place-items-center rounded-full bg-red-500 text-white text-xs font-bold"
+          class="hidden absolute -top-2 -right-2 min-w-[1.4rem] h-[1.4rem] px-1 grid place-items-center rounded-full bg-white text-brand-600 text-xs font-bold"
         >0</span>
       </a>
 
       <button
         type="button"
         data-mobile-menu
-        class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-100"
+        class="md:hidden w-10 h-10 grid place-items-center rounded-lg border border-slate-700 text-slate-200 hover:bg-white/10"
         aria-label="Abrir menú"
       >
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -68,14 +65,14 @@ const links = [
     </div>
   </div>
 
-  <nav data-mobile-panel class="md:hidden hidden border-t border-slate-200 bg-white px-4 pb-4">
+  <nav data-mobile-panel class="md:hidden hidden border-t border-slate-800 bg-slate-900 px-4 pb-4">
     {
       links.map((l) => (
         <a
           href={l.href}
           class:list={[
             'block px-3 py-3 rounded-lg font-medium mt-1',
-            current === l.href ? 'bg-brand-50 text-brand-700' : 'text-slate-700 hover:bg-slate-100',
+            current === l.href ? 'bg-white text-slate-900' : 'text-slate-300 hover:bg-white/10',
           ]}
         >
           {l.label}

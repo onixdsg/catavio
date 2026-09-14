@@ -5,11 +5,20 @@ subcategoria: Fútbol
 precio: 15900
 destacado: true
 stock: disponible
-imagen: https://picsum.photos/seed/pelota-de-futbol-n-5/800/600
+imagen: /images/pelotas1/pelota1-1.jpeg
 galeria:
-  - https://picsum.photos/seed/pelota-de-futbol-n-5-a/800/600
-  - https://picsum.photos/seed/pelota-de-futbol-n-5-b/800/600
-  - https://picsum.photos/seed/pelota-de-futbol-n-5-c/800/600
+  - /images/pelotas1/pelota1-1.jpeg
+  - /images/pelotas1/pelota1-2.jpeg
+  - /images/pelotas1/pelota1-3.jpeg
+  - /images/pelotas1/pelota1-4.jpeg
+  - /images/pelotas1/pelota1-5.jpeg
+  - /images/pelotas2/pelota2-1.jpeg
+  - /images/pelotas2/pelota2-2.jpeg
+  - /images/pelotas2/pelota2-3.jpeg
+  - /images/pelotas2/pelota2-4.jpeg
+  - /images/pelotas2/pelota2-5.jpeg
+  - /images/pelotas2/pelota2-6.jpeg
+  - /images/pelotas2/pelota2-7.jpeg
 descripcion: Pelota oficial N°5 con sellado termofundido.
 ---
 
