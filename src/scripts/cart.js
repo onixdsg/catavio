@@ -82,11 +82,13 @@ function whatsappLink(texto) {
 
 export function buildWhatsAppMessage() {
   const shop = window.SHOP || {};
+  const origin = window.location.origin;
   const lines = [];
   lines.push(`*NUEVO PEDIDO — ${shop.empresa || 'Tienda web'}*`);
   lines.push('');
   items.forEach((i) => {
     lines.push(`• ${i.title} (x${i.cantidad}) — ${formatPrice(i.precio * i.cantidad)}`);
+    lines.push(`${origin}/productos/${i.slug}/`);
   });
   lines.push('');
   const total = summary().total;
