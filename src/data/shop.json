@@ -1,15 +1,15 @@
 {
+  "nota_envio": "Forma de pago y envío se coordinan por WhatsApp al confirmar tu pedido.",
+  "eslogan": "Calidad y confianza, al alcance de un clic.",
+  "domicilio": "Villa María, Córdoba",
+  "simbolo": "$",
   "empresa": "Catavio Sport",
   "abreviatura": "Cs",
-  "eslogan": "Calidad y confianza, al alcance de un clic.",
   "descripcion": "Tienda de artículos deportivos en Villa María, Córdoba. Ropa, calzado y accesorios para todas las disciplinas, con atención personalizada y los mejores precios.",
-  "whatsapp": "5493534772685",
-  "email": "prueba@gmail.com",
-  "domicilio": "Villa María, Córdoba",
   "horarios": "De 8:00 a 17:00 hs",
+  "whatsapp": "5493536578668",
   "moneda": "ARS",
-  "simbolo": "$",
-  "nota_envio": "Forma de pago y envío se coordinan por WhatsApp al confirmar tu pedido.",
+  "email": "prueba@gmail.com",
   "redes": {
     "instagram": "",
     "facebook": ""
