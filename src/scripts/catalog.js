@@ -117,26 +117,26 @@ export function initCatalog() {
   function card(p) {
     const badge =
       p.destacado && p.stock !== 'sin_stock'
-        ? `<span class="absolute top-3 left-3 bg-amber-400 text-amber-900 text-xs font-bold px-2 py-1 rounded-full">Destacado</span>`
+        ? `<span class="absolute top-3 left-3 bg-brand-600 text-white text-xs font-bold px-2 py-1 rounded-full">Destacado</span>`
         : '';
     const stockBadge =
       p.stock === 'sin_stock'
-        ? `<span class="absolute top-3 right-3 bg-slate-700 text-white text-xs font-semibold px-2 py-1 rounded-full">Sin stock</span>`
+        ? `<span class="absolute top-3 right-3 bg-black/80 text-white text-xs font-semibold px-2 py-1 rounded-full">Sin stock</span>`
         : '';
     return `
-    <article class="group bg-white rounded-2xl border border-slate-200 overflow-hidden hover:shadow-lg hover:-translate-y-0.5 transition flex flex-col">
-      <a href="/productos/${p.slug}/" class="relative block aspect-square overflow-hidden bg-slate-100">
+    <article class="group bg-slate-900 rounded-2xl border border-slate-800 overflow-hidden hover:shadow-xl hover:shadow-brand-600/10 hover:border-slate-700 hover:-translate-y-0.5 transition flex flex-col">
+      <a href="/productos/${p.slug}/" class="relative block aspect-square overflow-hidden bg-slate-800">
         <img src="${p.imagen}" alt="${p.title}" loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
         ${badge}${stockBadge}
       </a>
       <div class="p-4 flex flex-col flex-1">
-        <p class="text-xs uppercase tracking-wide text-slate-400 font-medium">${p.categoryName}${p.subcategoria ? ` · ${p.subcategoria}` : ''}</p>
-        <a href="/productos/${p.slug}/" class="mt-1 font-semibold text-slate-800 line-clamp-2 hover:text-brand-600 transition">${p.title}</a>
-        <p class="mt-2 text-lg font-bold text-slate-900">${formatPrice(p.precio)}</p>
-        <div class="mt-3 pt-3 border-t border-slate-100">
+        <p class="text-xs uppercase tracking-wide text-slate-500 font-medium">${p.categoryName}${p.subcategoria ? ` · ${p.subcategoria}` : ''}</p>
+        <a href="/productos/${p.slug}/" class="mt-1 font-semibold text-white line-clamp-2 hover:text-brand-400 transition">${p.title}</a>
+        <p class="mt-2 text-lg font-bold text-brand-400">${formatPrice(p.precio)}</p>
+        <div class="mt-3 pt-3 border-t border-slate-800">
           ${
             p.stock === 'sin_stock'
-              ? `<span class="block text-center w-full px-4 py-2 rounded-lg bg-slate-100 text-slate-400 font-medium text-sm">Sin stock</span>`
+              ? `<span class="block text-center w-full px-4 py-2 rounded-lg bg-slate-800 text-slate-500 font-medium text-sm">Sin stock</span>`
               : `<button type="button" data-add-to-cart data-slug="${p.slug}" data-title="${p.title}" data-precio="${p.precio}" data-imagen="${p.imagen}" class="w-full px-4 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white font-medium text-sm transition">Agregar al carrito</button>`
           }
         </div>

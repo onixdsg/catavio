@@ -18,7 +18,7 @@ const cats = await buildCategoryMap();
 <BaseLayout title="Inicio | Tienda">
 
   <!-- HERO -->
-  <section class="bg-gradient-to-br from-brand-700 via-brand-600 to-brand-800 text-white">
+  <section class="bg-gradient-to-br from-brand-700 via-brand-800 to-black text-white">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center">
       <div>
         <p class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-sm font-medium mb-4">
@@ -30,14 +30,14 @@ const cats = await buildCategoryMap();
               <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
                 {featured.data.title}
               </h1>
-              <p class="mt-4 text-lg text-brand-100 max-w-xl">
+              <p class="mt-4 text-lg text-white/70 max-w-xl">
                 {featured.data.descripcion}
               </p>
               <p class="mt-6 text-3xl font-extrabold">{formatPrice(featured.data.precio)}</p>
               <div class="mt-8 flex flex-wrap gap-3">
                 <a
                   href={`/productos/${featured.id}/`}
-                  class="px-6 py-3 rounded-lg bg-white text-brand-700 font-semibold hover:bg-brand-50 transition"
+                  class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-slate-100 transition"
                 >
                   Ver producto
                 </a>
@@ -92,14 +92,14 @@ const cats = await buildCategoryMap();
             i: 'M17 20h5v-2a4 4 0 00-3-3.87m-8 5.87H4a4 4 0 00-4-4v-2a3 3 0 013-3h8a3 3 0 013 3v-.87M16 7a4 4 0 11-8 0 4 4 0 018 0z',
           },
         ].map((f) => (
-          <div class="bg-slate-50 rounded-2xl p-6 border border-slate-100">
+          <div class="bg-slate-900 rounded-2xl p-6 border border-slate-800">
             <span class="w-11 h-11 rounded-xl bg-brand-600 text-white grid place-items-center mb-4">
               <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
                 <path stroke-linecap="round" stroke-linejoin="round" d={f.i} />
               </svg>
             </span>
-            <h3 class="font-bold text-lg text-slate-900">{f.t}</h3>
-            <p class="mt-2 text-slate-600 text-sm leading-relaxed">{f.d}</p>
+            <h3 class="font-bold text-lg text-white">{f.t}</h3>
+            <p class="mt-2 text-slate-400 text-sm leading-relaxed">{f.d}</p>
           </div>
         ))
       }
@@ -107,16 +107,16 @@ const cats = await buildCategoryMap();
   </section>
 
   <!-- DESTACADOS -->
-  <section class="bg-slate-50 border-y border-slate-100">
+  <section class="bg-slate-900 border-y border-slate-800">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14">
       <div class="flex items-end justify-between gap-4 mb-8">
         <div>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Productos destacados</h2>
-          <p class="text-slate-500 mt-1">Una selección de lo mejor de nuestro catálogo.</p>
+          <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Productos destacados</h2>
+          <p class="text-slate-400 mt-1">Una selección de lo mejor de nuestro catálogo.</p>
         </div>
         <a
           href="/productos/"
-          class="hidden sm:inline-flex items-center gap-1 font-semibold text-brand-600 hover:text-brand-700 transition"
+          class="hidden sm:inline-flex items-center gap-1 font-semibold text-brand-400 hover:text-brand-300 transition"
         >
           Ver todos
           <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -143,7 +143,7 @@ const cats = await buildCategoryMap();
       <div class="sm:hidden mt-6 text-center">
         <a
           href="/productos/"
-          class="inline-flex items-center gap-1 font-semibold text-brand-600 hover:text-brand-700 transition"
+          class="inline-flex items-center gap-1 font-semibold text-brand-400 hover:text-brand-300 transition"
         >
           Ver todos los productos
         </a>
@@ -163,13 +163,13 @@ const cats = await buildCategoryMap();
         />
       </div>
       <div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">Sobre Catavio Sport</h2>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Sobre Catavio Sport</h2>
+        <p class="mt-4 text-slate-400 leading-relaxed">
           Somos una tienda de artículos deportivos de Villa María, Córdoba. Trabajamos con las
           mejores marcas para que encuentres ropa, calzado y accesorios para tu disciplina,
           sea fútbol, running, gimnasio o vida al aire libre.
         </p>
-        <p class="mt-4 text-slate-600 leading-relaxed">
+        <p class="mt-4 text-slate-400 leading-relaxed">
           Te asesoramos a la hora de elegir, atendemos tu pedido por WhatsApp y coordinamos
           entrega como prefieras. Tu próxima marca personal arranca acá.
         </p>
@@ -180,8 +180,8 @@ const cats = await buildCategoryMap();
               'Atención personalizada y asesoramiento',
               'Envíos y coordinación por WhatsApp',
             ].map((item) => (
-              <li class="flex items-start gap-3 text-slate-700">
-                <span class="mt-0.5 w-5 h-5 rounded-full bg-brand-100 text-brand-700 grid place-items-center shrink-0">
+              <li class="flex items-start gap-3 text-slate-300">
+                <span class="mt-0.5 w-5 h-5 rounded-full bg-brand-600 text-white grid place-items-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
                   </svg>

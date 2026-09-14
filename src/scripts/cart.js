@@ -185,8 +185,8 @@ export function renderCart() {
     container.innerHTML = `
       <div class="text-center py-16">
         <p class="text-2xl mb-2">🛒</p>
-        <p class="text-lg font-semibold text-slate-700">Tu carrito está vacío</p>
-        <p class="text-slate-500 mb-6">Agregá productos desde el catálogo para comenzar.</p>
+        <p class="text-lg font-semibold text-white">Tu carrito está vacío</p>
+        <p class="text-slate-400 mb-6">Agregá productos desde el catálogo para comenzar.</p>
         <a href="/productos" class="inline-block bg-brand-600 hover:bg-brand-700 text-white font-semibold px-6 py-3 rounded-lg transition">Ver productos</a>
       </div>`;
     return;
@@ -200,17 +200,17 @@ export function renderCart() {
         <img src="${i.imagen}" alt="${i.title}" class="w-20 h-20 sm:w-24 sm:h-24 object-cover rounded-lg" loading="lazy" />
       </a>
       <div class="flex-1 min-w-0">
-        <a href="/productos/${i.slug}/" class="font-semibold text-slate-800 hover:text-brand-600 line-clamp-2">${i.title}</a>
-        <p class="text-slate-500 text-sm">${formatPrice(i.precio)} / unidad</p>
+        <a href="/productos/${i.slug}/" class="font-semibold text-white hover:text-brand-400 line-clamp-2">${i.title}</a>
+        <p class="text-slate-400 text-sm">${formatPrice(i.precio)} / unidad</p>
         <div class="mt-2 flex items-center gap-2">
-      <button type="button" data-qty data-slug="${i.slug}" data-action="dec" aria-label="Restar" class="w-8 h-8 rounded border border-slate-300 hover:bg-slate-100">−</button>
-      <input type="number" value="${i.cantidad}" min="1" data-qty-input data-slug="${i.slug}" class="w-16 h-8 text-center border border-slate-300 rounded" />
-      <button type="button" data-qty data-slug="${i.slug}" data-action="inc" aria-label="Sumar" class="w-8 h-8 rounded border border-slate-300 hover:bg-slate-100">+</button>
+      <button type="button" data-qty data-slug="${i.slug}" data-action="dec" aria-label="Restar" class="w-8 h-8 rounded border border-slate-700 text-slate-200 hover:bg-slate-800">−</button>
+      <input type="number" value="${i.cantidad}" min="1" data-qty-input data-slug="${i.slug}" class="w-16 h-8 text-center border border-slate-700 bg-slate-800 text-white rounded" />
+      <button type="button" data-qty data-slug="${i.slug}" data-action="inc" aria-label="Sumar" class="w-8 h-8 rounded border border-slate-700 text-slate-200 hover:bg-slate-800">+</button>
     </div>
       </div>
       <div class="text-right shrink-0">
-        <p class="font-bold text-slate-900">${formatPrice(i.precio * i.cantidad)}</p>
-        <button type="button" data-remove="${i.slug}" class="mt-2 text-sm text-red-500 hover:text-red-700">Quitar</button>
+        <p class="font-bold text-brand-400">${formatPrice(i.precio * i.cantidad)}</p>
+        <button type="button" data-remove="${i.slug}" class="mt-2 text-sm text-red-400 hover:text-red-300">Quitar</button>
       </div>
     </div>`
     )
