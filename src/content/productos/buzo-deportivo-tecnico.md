@@ -5,11 +5,7 @@ subcategoria: Buzos
 precio: 34900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/buzo-deportivo-tecnico/800/600
-galeria:
-  - https://picsum.photos/seed/buzo-deportivo-tecnico-a/800/600
-  - https://picsum.photos/seed/buzo-deportivo-tecnico-b/800/600
-  - https://picsum.photos/seed/buzo-deportivo-tecnico-c/800/600
+imagen: /images/pelotas2/pelota2-14.jpeg
 descripcion: Buzo abrigado y liviano, perfecto para pre y post entreno.
 ---
 

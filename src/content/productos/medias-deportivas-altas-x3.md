@@ -5,11 +5,7 @@ subcategoria: Medias
 precio: 6900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/medias-deportivas-altas-x3/800/600
-galeria:
-  - https://picsum.photos/seed/medias-deportivas-altas-x3-a/800/600
-  - https://picsum.photos/seed/medias-deportivas-altas-x3-b/800/600
-  - https://picsum.photos/seed/medias-deportivas-altas-x3-c/800/600
+imagen: /images/pelotas2/pelota2-20.jpeg
 descripcion: Pack de 3 medias con refuerzo en talón y empeine.
 ---
 

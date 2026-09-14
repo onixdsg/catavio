@@ -5,11 +5,9 @@ subcategoria: Vóley
 precio: 14900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/balon-de-voley/800/600
+imagen: /images/pelotas2/pelota2-9.jpeg
 galeria:
-  - https://picsum.photos/seed/balon-de-voley-a/800/600
-  - https://picsum.photos/seed/balon-de-voley-b/800/600
-  - https://picsum.photos/seed/balon-de-voley-c/800/600
+  - /images/pelotas2/pelota2-10.jpeg
 descripcion: Balón de vóley con cuero sintético y buena retención de aire.
 ---
 

@@ -5,11 +5,7 @@ subcategoria: Shorts
 precio: 12800
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/short-de-futbol-profesional/800/600
-galeria:
-  - https://picsum.photos/seed/short-de-futbol-profesional-a/800/600
-  - https://picsum.photos/seed/short-de-futbol-profesional-b/800/600
-  - https://picsum.photos/seed/short-de-futbol-profesional-c/800/600
+imagen: /images/pelotas2/pelota2-25.jpeg
 descripcion: Short liviano con elastano para total libertad de movimiento.
 ---
 

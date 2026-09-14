@@ -5,11 +5,7 @@ subcategoria: Zapatillas Running
 precio: 89900
 destacado: true
 stock: disponible
-imagen: https://picsum.photos/seed/zapatillas-running-amortiguadas/800/600
-galeria:
-  - https://picsum.photos/seed/zapatillas-running-amortiguadas-a/800/600
-  - https://picsum.photos/seed/zapatillas-running-amortiguadas-b/800/600
-  - https://picsum.photos/seed/zapatillas-running-amortiguadas-c/800/600
+imagen: /images/pelotas2/pelota2-26.jpeg
 descripcion: Zapatillas con media suela amortiguada y malla transpirable.
 ---
 

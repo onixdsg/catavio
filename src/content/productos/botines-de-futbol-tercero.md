@@ -5,11 +5,7 @@ subcategoria: Botines
 precio: 59900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/botines-de-futbol-tercero/800/600
-galeria:
-  - https://picsum.photos/seed/botines-de-futbol-tercero-a/800/600
-  - https://picsum.photos/seed/botines-de-futbol-tercero-b/800/600
-  - https://picsum.photos/seed/botines-de-futbol-tercero-c/800/600
+imagen: /images/pelotas2/pelota2-13.jpeg
 descripcion: Botines con tapones de goma para jugar en cancha de césped.
 ---
 

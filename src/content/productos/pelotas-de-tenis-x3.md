@@ -5,11 +5,7 @@ subcategoria: Tenis
 precio: 8900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/pelotas-de-tenis-x3/800/600
-galeria:
-  - https://picsum.photos/seed/pelotas-de-tenis-x3-a/800/600
-  - https://picsum.photos/seed/pelotas-de-tenis-x3-b/800/600
-  - https://picsum.photos/seed/pelotas-de-tenis-x3-c/800/600
+imagen: /images/pelotas2/pelota2-23.jpeg
 descripcion: Tubo de 3 pelotas de tenis con alta presión.
 ---
 

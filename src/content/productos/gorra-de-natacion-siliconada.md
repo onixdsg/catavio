@@ -5,11 +5,7 @@ subcategoria: Gorras
 precio: 3200
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/gorra-de-natacion-siliconada/800/600
-galeria:
-  - https://picsum.photos/seed/gorra-de-natacion-siliconada-a/800/600
-  - https://picsum.photos/seed/gorra-de-natacion-siliconada-b/800/600
-  - https://picsum.photos/seed/gorra-de-natacion-siliconada-c/800/600
+imagen: /images/pelotas2/pelota2-18.jpeg
 descripcion: Gorra de silicona de larga duración, talla única.
 ---
 

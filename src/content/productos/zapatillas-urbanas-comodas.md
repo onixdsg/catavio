@@ -5,11 +5,7 @@ subcategoria: Zapatillas Urbanas
 precio: 74900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/zapatillas-urbanas-comodas/800/600
-galeria:
-  - https://picsum.photos/seed/zapatillas-urbanas-comodas-a/800/600
-  - https://picsum.photos/seed/zapatillas-urbanas-comodas-b/800/600
-  - https://picsum.photos/seed/zapatillas-urbanas-comodas-c/800/600
+imagen: /images/pelotas2/pelota2-27.jpeg
 descripcion: Zapatillas casuales para el día a día.
 ---
 

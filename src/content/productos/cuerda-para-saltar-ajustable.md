@@ -5,11 +5,7 @@ subcategoria: Accesorios
 precio: 5400
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/cuerda-para-saltar-ajustable/800/600
-galeria:
-  - https://picsum.photos/seed/cuerda-para-saltar-ajustable-a/800/600
-  - https://picsum.photos/seed/cuerda-para-saltar-ajustable-b/800/600
-  - https://picsum.photos/seed/cuerda-para-saltar-ajustable-c/800/600
+imagen: /images/pelotas2/pelota2-17.jpeg
 descripcion: Cuerda de velocidad con rodamientos y largo ajustable.
 ---
 

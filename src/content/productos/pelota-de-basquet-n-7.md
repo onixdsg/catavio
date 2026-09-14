@@ -5,11 +5,9 @@ subcategoria: Básquet
 precio: 16900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/pelota-de-basquet-n-7/800/600
+imagen: /images/pelotas2/pelota2-21.jpeg
 galeria:
-  - https://picsum.photos/seed/pelota-de-basquet-n-7-a/800/600
-  - https://picsum.photos/seed/pelota-de-basquet-n-7-b/800/600
-  - https://picsum.photos/seed/pelota-de-basquet-n-7-c/800/600
+  - /images/pelotas2/pelota2-22.jpeg
 descripcion: Pelota de básquet reforzada para piso de madera o cemento.
 ---
 

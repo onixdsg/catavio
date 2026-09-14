@@ -5,11 +5,7 @@ subcategoria: Pesas
 precio: 25900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/juego-de-mancuernas-x2/800/600
-galeria:
-  - https://picsum.photos/seed/juego-de-mancuernas-x2-a/800/600
-  - https://picsum.photos/seed/juego-de-mancuernas-x2-b/800/600
-  - https://picsum.photos/seed/juego-de-mancuernas-x2-c/800/600
+imagen: /images/pelotas2/pelota2-19.jpeg
 descripcion: Par de mancuernas con agarre ergonómico antideslizante.
 ---
 

@@ -5,11 +5,7 @@ subcategoria: Botelleros
 precio: 5800
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/botellero-deportivo/800/600
-galeria:
-  - https://picsum.photos/seed/botellero-deportivo-a/800/600
-  - https://picsum.photos/seed/botellero-deportivo-b/800/600
-  - https://picsum.photos/seed/botellero-deportivo-c/800/600
+imagen: /images/pelotas2/pelota2-12.jpeg
 descripcion: Botellero ajustable para llevar tu bebida a todos lados.
 ---
 

@@ -5,11 +5,7 @@ subcategoria: Remeras
 precio: 18500
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/remera-deportiva-dry-fit/800/600
-galeria:
-  - https://picsum.photos/seed/remera-deportiva-dry-fit-a/800/600
-  - https://picsum.photos/seed/remera-deportiva-dry-fit-b/800/600
-  - https://picsum.photos/seed/remera-deportiva-dry-fit-c/800/600
+imagen: /images/pelotas2/pelota2-24.jpeg
 descripcion: Remera transpirable de microfibra con tecnología dry-fit.
 ---
 

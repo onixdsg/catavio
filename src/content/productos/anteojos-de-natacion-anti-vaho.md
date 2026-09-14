@@ -5,11 +5,7 @@ subcategoria: Anteojos
 precio: 8900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/anteojos-de-natacion-anti-vaho/800/600
-galeria:
-  - https://picsum.photos/seed/anteojos-de-natacion-anti-vaho-a/800/600
-  - https://picsum.photos/seed/anteojos-de-natacion-anti-vaho-b/800/600
-  - https://picsum.photos/seed/anteojos-de-natacion-anti-vaho-c/800/600
+imagen: /images/pelotas2/pelota2-8.jpeg
 descripcion: Anteojos de natación con protección UV y ajuste cómodo.
 ---
 

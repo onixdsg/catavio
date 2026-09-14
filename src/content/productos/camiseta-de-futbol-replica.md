@@ -5,11 +5,7 @@ subcategoria: Remeras
 precio: 24900
 destacado: false
 stock: disponible
-imagen: https://picsum.photos/seed/camiseta-de-futbol-replica/800/600
-galeria:
-  - https://picsum.photos/seed/camiseta-de-futbol-replica-a/800/600
-  - https://picsum.photos/seed/camiseta-de-futbol-replica-b/800/600
-  - https://picsum.photos/seed/camiseta-de-futbol-replica-c/800/600
+imagen: /images/pelotas2/pelota2-15.jpeg
 descripcion: Camiseta réplica con diseño clásico, ideal para jugar o alentar.
 ---
 
