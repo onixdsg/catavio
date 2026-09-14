@@ -118,15 +118,13 @@ collections:
           default: false,
           required: false,
         }
-      - {
-          label: "Stock",
-          name: "stock",
-          widget: "select",
-          default: "disponible",
-          options:
-            - { label: "Disponible", value: "disponible" }
-            - { label: "Sin stock", value: "sin_stock" },
-        }
+      - label: "Stock"
+        name: "stock"
+        widget: "select"
+        default: "disponible"
+        options:
+          - { label: "Disponible", value: "disponible" }
+          - { label: "Sin stock", value: "sin_stock" }
       - { label: "Foto principal", name: "imagen", widget: "image" }
       - {
           label: "Galería de fotos (opcional)",
