@@ -5,7 +5,7 @@ subcategoria: Anteojos
 precio: 8900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-8.jpeg
+imagen: /images/pelotas2/pelota2-8.webp
 descripcion: Anteojos de natación con protección UV y ajuste cómodo.
 ---
 

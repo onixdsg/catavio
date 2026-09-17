@@ -5,7 +5,7 @@ subcategoria: Pesas
 precio: 25900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-19.jpeg
+imagen: /images/pelotas2/pelota2-19.webp
 descripcion: Par de mancuernas con agarre ergonómico antideslizante.
 ---
 

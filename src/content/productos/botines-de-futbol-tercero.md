@@ -5,7 +5,7 @@ subcategoria: Botines
 precio: 59900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-13.jpeg
+imagen: /images/pelotas2/pelota2-13.webp
 descripcion: Botines con tapones de goma para jugar en cancha de césped.
 ---
 

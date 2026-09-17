@@ -5,7 +5,7 @@ subcategoria: Gorras
 precio: 3200
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-18.jpeg
+imagen: /images/pelotas2/pelota2-18.webp
 descripcion: Gorra de silicona de larga duración, talla única.
 ---
 

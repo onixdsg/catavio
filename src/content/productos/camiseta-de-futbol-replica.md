@@ -5,7 +5,7 @@ subcategoria: Remeras
 precio: 24900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-15.jpeg
+imagen: /images/pelotas2/pelota2-15.webp
 descripcion: Camiseta réplica con diseño clásico, ideal para jugar o alentar.
 ---
 

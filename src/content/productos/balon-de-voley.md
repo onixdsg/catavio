@@ -5,9 +5,9 @@ subcategoria: Vóley
 precio: 14900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-9.jpeg
+imagen: /images/pelotas2/pelota2-9.webp
 galeria:
-  - /images/pelotas2/pelota2-10.jpeg
+  - /images/pelotas2/pelota2-10.webp
 descripcion: Balón de vóley con cuero sintético y buena retención de aire.
 ---
 

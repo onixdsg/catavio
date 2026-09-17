@@ -5,7 +5,7 @@ subcategoria: Colchonetas
 precio: 18900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-16.jpeg
+imagen: /images/pelotas2/pelota2-16.webp
 descripcion: Colchoneta antideslizante de 6mm con correa de transporte.
 ---
 

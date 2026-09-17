@@ -5,7 +5,7 @@ subcategoria: Tenis
 precio: 8900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-23.jpeg
+imagen: /images/pelotas2/pelota2-23.webp
 descripcion: Tubo de 3 pelotas de tenis con alta presión.
 ---
 

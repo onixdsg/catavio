@@ -5,7 +5,7 @@ subcategoria: Botelleros
 precio: 5800
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-12.jpeg
+imagen: /images/pelotas2/pelota2-12.webp
 descripcion: Botellero ajustable para llevar tu bebida a todos lados.
 ---
 

@@ -5,7 +5,7 @@ subcategoria: Accesorios
 precio: 5400
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-17.jpeg
+imagen: /images/pelotas2/pelota2-17.webp
 descripcion: Cuerda de velocidad con rodamientos y largo ajustable.
 ---
 

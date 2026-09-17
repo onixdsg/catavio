@@ -5,7 +5,7 @@ subcategoria: Zapatillas Urbanas
 precio: 74900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-27.jpeg
+imagen: /images/pelotas2/pelota2-27.webp
 descripcion: Zapatillas casuales para el día a día.
 ---
 

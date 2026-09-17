@@ -5,7 +5,7 @@ subcategoria: Medias
 precio: 6900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-20.jpeg
+imagen: /images/pelotas2/pelota2-20.webp
 descripcion: Pack de 3 medias con refuerzo en talón y empeine.
 ---
 

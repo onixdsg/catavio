@@ -5,7 +5,7 @@ subcategoria: Hidratación
 precio: 7900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-11.jpeg
+imagen: /images/pelotas2/pelota2-11.webp
 descripcion: Botella deportiva sin BPA con boquilla de flujo rápido.
 ---
 

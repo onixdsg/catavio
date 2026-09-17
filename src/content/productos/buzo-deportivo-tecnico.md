@@ -5,7 +5,7 @@ subcategoria: Buzos
 precio: 34900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-14.jpeg
+imagen: /images/pelotas2/pelota2-14.webp
 descripcion: Buzo abrigado y liviano, perfecto para pre y post entreno.
 ---
 
