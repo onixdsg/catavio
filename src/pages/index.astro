@@ -305,6 +305,30 @@ const cats = await buildCategoryMap();
         )
       );
 
+      let touchStartX = 0;
+      let touchStartY = 0;
+      wrap.addEventListener(
+        'touchstart' as 'pointerdown',
+        (e: Event) => {
+          const t = (e as TouchEvent).changedTouches[0];
+          touchStartX = t.clientX;
+          touchStartY = t.clientY;
+        },
+        { passive: true }
+      );
+      wrap.addEventListener(
+        'touchend' as 'pointerdown',
+        (e: Event) => {
+          const t = (e as TouchEvent).changedTouches[0];
+          const dx = t.clientX - touchStartX;
+          const dy = t.clientY - touchStartY;
+          if (Math.abs(dx) > 48 && Math.abs(dx) > Math.abs(dy) * 1.5) {
+            go(dx < 0 ? current + 1 : current - 1);
+          }
+        },
+        { passive: true }
+      );
+
       timer = window.setInterval(() => go(current + 1), 6000);
     }
   }
