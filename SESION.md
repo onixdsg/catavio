@@ -6,14 +6,15 @@ Nota de uso: este archivo se actualiza al final de cada sesión para retomar el 
 
 ## 1. Estado actual (dónde quedamos)
 
-- Último commit: **"Optimización de imágenes a WebP + limpieza"** (fotos ~253KB → ~66KB; logo 944KB → 13KB). Sitio completo ~9.6MB → ~2.6MB.
-- Working tree: limpio tras el commit (los cambios se pushearon a GitHub para desplegar en Netlify).
+- Último commit: **"Soporte táctil (deslizar) en el carrusel de destacados"** (`681e139`). Working tree limpio y pusheado a GitHub (deploy automático en Netlify).
 - Cambios de esta sesión:
-  - Nuevo script `scripts/optimize-images.mjs` (reutilizable): convierte imágenes a WebP 640px q58 + logo a 512px q85, y actualiza las referencias del frontmatter.
-  - 29 fotos de producto convertidas a WebP (`public/images/**/*.webp`), referencias actualizadas en los 16 `src/content/productos/*.md` (imagen + galeria).
-  - Logo → `public/images/logo.webp` (13KB); referencias actualizadas en Header, Footer, index y og:image.
-  - Borrados los 33 JPEG/PNG originales (incluidos 3 sin usar: pelota2-24/25/26).
-- Antes de esta sesión: el pedido de WhatsApp incluía link por artículo (commit `1417de9`).
+  - **Sección "Sobre nosotros" editable desde el panel** (`a604326`): nuevos campos `sobre_titulo`, `sobre_textos` (párrafos) y `sobre_items` (lista con checks) en `src/data/shop.json`, expuestos en `public/admin/config.yml` (colección Datos de la tienda) y usados en `src/pages/index.astro` con fallback al texto original. Ojo: Decap reescribe el JSON con solo los campos declarados en el YAML.
+  - **Logo en el nav más grande**: `h-12` (móvil) / `h-14` (desktop) en `Header.astro`.
+  - **Marca de agua del logo en el hero**: ocupando la mitad izquierda (`w-1/2 object-fill opacity-10`), detrás del contenido (`z-0` vs `z-10` del contenido). Quedó a la izquierda a pedido del cliente.
+  - **Carrusel de productos destacados en el hero** (`20f7295`): si existe más de un producto con `destacado: true`, se arma un carrusel con fade (slides apiladas con `grid` y `col-start-1 row-start-1`), flechas ‹ › (bg-white/30), puntitos de navegación y auto-avance cada 6s. Si hay 0 o 1 destacado, se muestra el de siempre sin controles.
+  - **Soporte táctil** (`681e139`): swipe horizontal (touchstart/touchend, umbral 48px e ignora gestos verticales).
+- Antes de esta sesión: el pedido de WhatsApp incluía link por artículo y las imágenes se optimizaron a WebP (commit `f60433b`).
+- Nota: hubo 2 commits del remoto provenientes de la API del CMS/panel (`2dae3c7 Update Configuración shop` y `0fd4961 Update Producto anteojos`) que se conservaron al rebasear.
 - URL de producción (configurada en `astro.config.mjs`): `https://catavio.netlify.app`.
 - Repo/GitHub: `onixdsg/catavio` (Netlify despliega desde `main`).
 
@@ -183,7 +184,15 @@ Alternativa: Vercel (requiere OAuth de GitHub, más engorroso).
 ## 11. Historial reciente (referencia)
 
 ```
-Optimización de imágenes a WebP + limpieza      (último commit de esta sesión)
+Soporte táctil (deslizar) en el carrusel de destacados        (último commit de esta sesión)
+20f7295 Carrusel de productos destacados en el hero + marca de agua detrás del contenido
+4dc9de3 Marca de agua del logo expandida a todo el hero
+8a3b828 Marca de agua del logo completa y centrada en el hero
+482211f Logo más grande en el nav y marca de agua en el hero
+0fd4961 Update Producto "anteojos-de-natacion-anti-vaho"      (desde el panel)
+a604326 Sección 'Sobre nosotros' editable desde el panel
+2dae3c7 Update Configuración "shop"                            (desde el panel)
+f60433b Optimización de imágenes a WebP + limpieza
 1417de9 Agrega link de cada articulo en el pedido enviado por WhatsApp
 219f78d Update Configuración "shop"
 09627ef Delete Producto "short-de-futbol-profesional"
