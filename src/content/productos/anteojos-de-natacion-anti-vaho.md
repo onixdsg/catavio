@@ -3,7 +3,7 @@ title: Anteojos de Natación Anti-vaho
 categoria: natacion
 subcategoria: Anteojos
 precio: 8900
-destacado: false
+destacado: true
 stock: disponible
 imagen: /images/pelotas2/pelota2-8.webp
 descripcion: Anteojos de natación con protección UV y ajuste cómodo.
