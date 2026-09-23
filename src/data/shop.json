@@ -13,5 +13,15 @@
   "redes": {
     "instagram": "",
     "facebook": ""
-  }
+  },
+  "sobre_titulo": "Sobre Catavio Sport",
+  "sobre_textos": [
+    "Somos una tienda de artículos deportivos de Villa María, Córdoba. Trabajamos con las mejores marcas para que encuentres ropa, calzado y accesorios para tu disciplina, sea fútbol, running, gimnasio o vida al aire libre.",
+    "Te asesoramos a la hora de elegir, atendemos tu pedido por WhatsApp y coordinamos entrega como prefieras. Tu próxima marca personal arranca acá."
+  ],
+  "sobre_items": [
+    "Marcas de equipamiento deportivo",
+    "Atención personalizada y asesoramiento",
+    "Envíos y coordinación por WhatsApp"
+  ]
 }

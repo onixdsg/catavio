@@ -2,6 +2,24 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import ProductCard from '../components/ProductCard.astro';
 import { getProducts, formatPrice, buildCategoryMap } from '../lib/shop';
+import shop from '../data/shop.json';
+
+const sobreTitulo = shop.sobre_titulo || 'Sobre Catavio Sport';
+const sobreTextos =
+  shop.sobre_textos?.length > 0
+    ? shop.sobre_textos
+    : [
+        'Somos una tienda de artículos deportivos de Villa María, Córdoba. Trabajamos con las mejores marcas para que encuentres ropa, calzado y accesorios para tu disciplina, sea fútbol, running, gimnasio o vida al aire libre.',
+        'Te asesoramos a la hora de elegir, atendemos tu pedido por WhatsApp y coordinamos entrega como prefieras. Tu próxima marca personal arranca acá.',
+      ];
+const sobreItems =
+  shop.sobre_items?.length > 0
+    ? shop.sobre_items
+    : [
+        'Marcas de equipamiento deportivo',
+        'Atención personalizada y asesoramiento',
+        'Envíos y coordinación por WhatsApp',
+      ];
 
 const products = await getProducts();
 const featured =
@@ -163,23 +181,15 @@ const cats = await buildCategoryMap();
         />
       </div>
       <div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">Sobre Catavio Sport</h2>
-        <p class="mt-4 text-slate-400 leading-relaxed">
-          Somos una tienda de artículos deportivos de Villa María, Córdoba. Trabajamos con las
-          mejores marcas para que encuentres ropa, calzado y accesorios para tu disciplina,
-          sea fútbol, running, gimnasio o vida al aire libre.
-        </p>
-        <p class="mt-4 text-slate-400 leading-relaxed">
-          Te asesoramos a la hora de elegir, atendemos tu pedido por WhatsApp y coordinamos
-          entrega como prefieras. Tu próxima marca personal arranca acá.
-        </p>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white">{sobreTitulo}</h2>
+        {
+          sobreTextos.map((parrafo) => (
+            <p class="mt-4 text-slate-400 leading-relaxed">{parrafo}</p>
+          ))
+        }
         <ul class="mt-6 space-y-3">
           {
-            [
-              'Marcas de equipamiento deportivo',
-              'Atención personalizada y asesoramiento',
-              'Envíos y coordinación por WhatsApp',
-            ].map((item) => (
+            sobreItems.map((item) => (
               <li class="flex items-start gap-3 text-slate-300">
                 <span class="mt-0.5 w-5 h-5 rounded-full bg-brand-600 text-white grid place-items-center shrink-0">
                   <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">

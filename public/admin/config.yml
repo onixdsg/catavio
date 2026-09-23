@@ -60,6 +60,25 @@ collections:
             fields:
               - { label: "Instagram", name: "instagram", widget: "string", required: false }
               - { label: "Facebook", name: "facebook", widget: "string", required: false }
+          - { label: "Título de la sección \"Sobre nosotros\"", name: "sobre_titulo", widget: "string", required: false }
+          - {
+              label: "Párrafos de la sección \"Sobre nosotros\"",
+              name: "sobre_textos",
+              widget: "list",
+              required: false,
+              allow_add: true,
+              collapsed: true,
+              field: { label: "Párrafo", name: "parrafo", widget: "text" },
+            }
+          - {
+              label: "Lista de la sección \"Sobre nosotros\" (ítems con tilde de verificación)",
+              name: "sobre_items",
+              widget: "list",
+              required: false,
+              allow_add: true,
+              collapsed: true,
+              field: { label: "Ítem", name: "item", widget: "string" },
+            }
 
   - name: "categorias"
     label: "Categorías"
