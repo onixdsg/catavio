@@ -22,11 +22,12 @@ const sobreItems =
       ];
 
 const products = await getProducts();
-const featured =
-  products.find((p) => p.data.destacado) ?? products[0];
+const destacados = products.filter((p) => p.data.destacado);
+const featured = destacados.length > 0 ? destacados : [products[0]];
 
+const featuredIds = new Set(featured.map((p) => p.id));
 const otros = products
-  .filter((p) => p.id !== featured?.id)
+  .filter((p) => !featuredIds.has(p.id))
   .slice(0, 4);
 
 const cats = await buildCategoryMap();
@@ -41,57 +42,108 @@ const cats = await buildCategoryMap();
       src="/images/logo.webp"
       alt=""
       aria-hidden="true"
-      class="pointer-events-none select-none absolute inset-0 w-full h-full object-contain p-8 opacity-10 rotate-12"
+      class="pointer-events-none select-none absolute left-0 inset-y-0 w-1/2 object-fill opacity-10 z-0"
     />
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20 grid lg:grid-cols-2 gap-10 items-center relative">
-      <div>
-        <p class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-sm font-medium mb-4">
-          Producto destacado de la semana
-        </p>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20 relative z-10">
+      <div class="grid" data-hero-carousel>
         {
-          featured && (
-            <>
-              <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
-                {featured.data.title}
-              </h1>
-              <p class="mt-4 text-lg text-white/70 max-w-xl">
-                {featured.data.descripcion}
-              </p>
-              <p class="mt-6 text-3xl font-extrabold">{formatPrice(featured.data.precio)}</p>
-              <div class="mt-8 flex flex-wrap gap-3">
-                <a
-                  href={`/productos/${featured.id}/`}
-                  class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-slate-100 transition"
-                >
-                  Ver producto
-                </a>
-                <button
-                  type="button"
-                  data-add-to-cart
-                  data-slug={featured.id}
-                  data-title={featured.data.title}
-                  data-precio={String(featured.data.precio)}
-                  data-imagen={featured.data.imagen}
-                  class="px-6 py-3 rounded-lg bg-amber-400 text-amber-900 font-semibold hover:bg-amber-300 transition"
-                >
-                  Agregar al carrito
-                </button>
+          featured.map((p, i) => (
+            <div
+              data-hero-slide
+              class:list={[
+                'col-start-1 row-start-1 grid lg:grid-cols-2 gap-10 items-center transition-opacity duration-500',
+                i === 0 ? 'opacity-100' : 'opacity-0 pointer-events-none',
+              ]}
+              aria-hidden={i !== 0}
+              inert={i !== 0}
+            >
+              <div>
+                <p class="inline-flex items-center gap-2 bg-white/10 rounded-full px-3 py-1 text-sm font-medium mb-4">
+                  Producto destacado de la semana
+                </p>
+                <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+                  {p.data.title}
+                </h1>
+                <p class="mt-4 text-lg text-white/70 max-w-xl">
+                  {p.data.descripcion}
+                </p>
+                <p class="mt-6 text-3xl font-extrabold">{formatPrice(p.data.precio)}</p>
+                <div class="mt-8 flex flex-wrap gap-3">
+                  <a
+                    href={`/productos/${p.id}/`}
+                    class="px-6 py-3 rounded-lg bg-white text-slate-900 font-semibold hover:bg-slate-100 transition"
+                  >
+                    Ver producto
+                  </a>
+                  <button
+                    type="button"
+                    data-add-to-cart
+                    data-slug={p.id}
+                    data-title={p.data.title}
+                    data-precio={String(p.data.precio)}
+                    data-imagen={p.data.imagen}
+                    class="px-6 py-3 rounded-lg bg-amber-400 text-amber-900 font-semibold hover:bg-amber-300 transition"
+                  >
+                    Agregar al carrito
+                  </button>
+                </div>
               </div>
-            </>
-          )
+              <div class="relative">
+                <img
+                  src={p.data.imagen}
+                  alt={p.data.title}
+                  class="w-full aspect-square object-cover rounded-3xl shadow-2xl ring-1 ring-white/20"
+                />
+              </div>
+            </div>
+          ))
         }
       </div>
-      <div class="relative">
-        {
-          featured && (
-            <img
-              src={featured.data.imagen}
-              alt={featured.data.title}
-              class="w-full aspect-square object-cover rounded-3xl shadow-2xl ring-1 ring-white/20"
-            />
-          )
-        }
-      </div>
+
+      {
+        featured.length > 1 && (
+          <div class="mt-8 flex items-center justify-center gap-5">
+            <button
+              type="button"
+              data-hero-prev
+              class="w-10 h-10 grid place-items-center rounded-full bg-white/30 text-white hover:bg-white/40 transition"
+              aria-label="Producto anterior"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 18l-6-6 6-6" />
+              </svg>
+            </button>
+
+            <div class="flex items-center gap-2">
+              {
+                featured.map((_, i) => (
+                  <button
+                    type="button"
+                    data-hero-dot
+                    data-target={i}
+                    class:list={[
+                      'w-2.5 h-2.5 rounded-full transition',
+                      i === 0 ? 'bg-white' : 'bg-white/40 hover:bg-white/70',
+                    ]}
+                    aria-label={`Ir al destacado ${i + 1}`}
+                  ></button>
+                ))
+              }
+            </div>
+
+            <button
+              type="button"
+              data-hero-next
+              class="w-10 h-10 grid place-items-center rounded-full bg-white/30 text-white hover:bg-white/40 transition"
+              aria-label="Producto siguiente"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 18l6-6-6-6" />
+              </svg>
+            </button>
+          </div>
+        )
+      }
     </div>
   </section>
 
@@ -218,3 +270,42 @@ const cats = await buildCategoryMap();
   </section>
 
 </BaseLayout>
+
+<script>
+  const wrap = document.querySelector('[data-hero-carousel]');
+  if (wrap) {
+    const slides = [...wrap.querySelectorAll('[data-hero-slide]')];
+    if (slides.length > 1) {
+      const dots = [...document.querySelectorAll('[data-hero-dot]')];
+      const prev = document.querySelector('[data-hero-prev]');
+      const next = document.querySelector('[data-hero-next]');
+      let current = 0;
+      let timer: number | undefined;
+
+      const go = (target: number) => {
+        current = (target + slides.length) % slides.length;
+        slides.forEach((s, i) => {
+          const on = i === current;
+          s.classList.toggle('opacity-100', on);
+          s.classList.toggle('opacity-0', !on);
+          s.classList.toggle('pointer-events-none', !on);
+          s.toggleAttribute('inert', !on);
+          s.setAttribute('aria-hidden', String(!on));
+        });
+        dots.forEach((d, i) => d.classList.toggle('bg-white', i === current));
+        if (timer !== undefined) clearInterval(timer);
+        timer = window.setInterval(() => go(current + 1), 6000);
+      };
+
+      prev?.addEventListener('click', () => go(current - 1));
+      next?.addEventListener('click', () => go(current + 1));
+      dots.forEach((d) =>
+        d.addEventListener('click', () =>
+          go(Number((d as HTMLElement).dataset.target))
+        )
+      );
+
+      timer = window.setInterval(() => go(current + 1), 6000);
+    }
+  }
+</script>
