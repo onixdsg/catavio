@@ -1,29 +1,29 @@
 ---
-title: Colchoneta de Yoga
-categoria: gimnasio
-subcategoria: Colchonetas
-precio: 18900
+title: Pelota de futbol P.U. estilo Penalty
+categoria: accesorios
+subcategoria: Pelotas de futbol P.U.
+precio: 32570
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-16.webp
-descripcion: Colchoneta antideslizante de 6mm con correa de transporte.
+imagen: /uploads/pu-estrella-.jpg
+descripcion: >
+  Pelota de fútbol  de P.U. oficial, tamaño N.º 5, ideal para fútbol 11.
+  Fabricada en P.U. (poliuretano), cuenta con peso y medidas reglamentarias,
+  ofreciendo una excelente opción para quienes buscan calidad y durabilidad. 
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
+Pelota P.U estilo Penalty (*a diferencia de otros materiales, el poliuretano ofrece características muy superiores que imitan el comportamiento del cuero natural, pero con ventajas tecnológicas como tacto suave y mejor control, elasticidad y rebote, resistencia al agua y alta durabilidad*).
 
-**Colchoneta de Yoga** de alta calidad, ideal para Elementos para entrenar en casa o en el gimnasio.
+Tamaño N.º 5.
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Peso y medidas reglamentarias para fútbol 11.
 
-### Uso recomendado
+Confeccionada y cocida a mano.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Permite reparaciones y reemplazo de cámara.
 
-### Contenido de la caja
-
-- 1 x Colchoneta de Yoga
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en color azul y negro.
