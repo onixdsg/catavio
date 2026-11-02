@@ -1,11 +1,11 @@
 ---
-title: Camiseta de Fútbol Réplica
-categoria: ropa
-subcategoria: Remeras
-precio: 24900
+title: Pelota de futbol P.U. estilo Nassau
+categoria: accesorios
+subcategoria: Pelota de P.U.
+precio: 120
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-15.webp
+imagen: https://drive.google.com/drive/u/0/folders/1pY3i6enQoLWdmr78F-7oCFusNxU2GuqC
 descripcion: Camiseta réplica con diseño clásico, ideal para jugar o alentar.
 ---
 
