@@ -6,7 +6,9 @@ precio: 46990
 destacado: false
 stock: disponible
 imagen: /uploads/futbol-5.jpg
-descripcion: >+
+galeria:
+  - /uploads/molino.jpg
+descripcion: >
   Pelota de fútbol oficial para fútbol 5 (medio pique). Fabricada en cuero,
   cuenta con peso y medidas reglamentarias, ofreciendo una excelente opción para
   quienes buscan calidad.
