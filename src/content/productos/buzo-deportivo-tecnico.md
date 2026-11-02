@@ -6,6 +6,8 @@ precio: 36000
 destacado: false
 stock: disponible
 imagen: /uploads/kicker-naranja-1-.jpg
+galeria:
+  - /uploads/kicker-azul.jpg
 descripcion: >+
   Pelota de fútbol de excelente calidad, fabricada en PU (poliuretano) con
   superficie texturada y tecnología termosellada, ideal para la práctica de
