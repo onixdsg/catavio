@@ -4,7 +4,7 @@ subcategorias:
   - Pelotas de P.U.
   - Pelotas de PVC
   - Pelotas de cuero vaqueta
-  - "Pelotas cuero descarne "
+  - Pelotas cuero retro
   - "Pelotas de sintético "
   - "Pelotas importadas cocidas a máquina "
   - Pelotas termoselladas
