@@ -2,13 +2,13 @@
 title: Pelota de P.U. estillo AFA
 categoria: accesorios
 subcategoria: Pelotas de P.U.
-precio: 22570
+precio: 32570
 destacado: false
 stock: disponible
 imagen: /uploads/afa.jpg
 galeria:
   - /images/pelotas2/pelota2-10.webp
-descripcion: >+
+descripcion: >
   Pelota de fútbol P.U., tamaño N.º 5, ideal para fútbol 11. Fabricada en P.U.
   (poliuretano), cuenta con peso y medidas reglamentarias, ofreciendo una
   excelente opción para quienes buscan calidad. 
