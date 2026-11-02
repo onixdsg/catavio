@@ -2,28 +2,28 @@
 title: Pelota de futbol P.U. estilo Nassau
 categoria: accesorios
 subcategoria: Pelota de P.U.
-precio: 120
+precio: 32570
 destacado: false
 stock: disponible
 imagen: https://drive.google.com/drive/u/0/folders/1pY3i6enQoLWdmr78F-7oCFusNxU2GuqC
-descripcion: Camiseta réplica con diseño clásico, ideal para jugar o alentar.
+descripcion: >
+  Pelota de fútbol  de P.U. oficial, tamaño N.º 5, ideal para fútbol 11.
+  Fabricada en P.U. (poliuretano), cuenta con peso y medidas reglamentarias,
+  ofreciendo una excelente opción para quienes buscan calidad y durabilidad. 
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
+Pelota P.U estilo Champions (*a diferencia de otros materiales, el poliuretano ofrece características muy superiores que imitan el comportamiento del cuero natural, pero con ventajas tecnológicas como tacto suave y mejor control, elasticidad y rebote, resistencia al agua y alta durabilidad*).
 
-**Camiseta de Fútbol Réplica** de alta calidad, ideal para Indumentaria deportiva cómoda y de calidad para entrenar y jugar.
+Tamaño N.º 5.
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Peso y medidas reglamentarias para fútbol 11.
 
-### Uso recomendado
+Confeccionada y cocida a mano.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Permite reparaciones y reemplazo de cámara.
 
-### Contenido de la caja
-
-- 1 x Camiseta de Fútbol Réplica
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en color azul y negro.
