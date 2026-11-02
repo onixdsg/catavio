@@ -1,29 +1,29 @@
 ---
-title: Botines de Fútbol Tercero
-categoria: calzado
-subcategoria: Botines
-precio: 59900
+title: Pelota de futbol 5 cuero vaqueta
+categoria: accesorios
+subcategoria: Pelota de futbol 5 cuero vaqueta
+precio: 46990
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-13.webp
-descripcion: Botines con tapones de goma para jugar en cancha de césped.
+imagen: /uploads/futbol-5.jpg
+descripcion: >+
+  Pelota de fútbol oficial para fútbol 5 (medio pique). Fabricada en cuero,
+  cuenta con peso y medidas reglamentarias, ofreciendo una excelente opción para
+  quienes buscan calidad.
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
+Cuero vaqueta
 
-**Botines de Fútbol Tercero** de alta calidad, ideal para Zapatillas y botines para las distintas disciplinas.
+Futbol 5 (medio pique)
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Peso y medidas reglamentarias para fútbol 5.
 
-### Uso recomendado
+Confeccionada y cocida a mano.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Permite reparaciones y reemplazo de cámara.
 
-### Contenido de la caja
-
-- 1 x Botines de Fútbol Tercero
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en un único color.
