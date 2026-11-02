@@ -16,7 +16,7 @@ descripcion: >
 ---
 **Características del producto:**
 
-Pelota P.U estilo Champions (*a diferencia de otros materiales, el poliuretano ofrece características muy superiores que imitan el comportamiento del cuero natural, pero con ventajas tecnológicas como tacto suave y mejor control, elasticidad y rebote, resistencia al agua y alta durabilidad*).
+Pelota P.U estilo Nassau (*a diferencia de otros materiales, el poliuretano ofrece características muy superiores que imitan el comportamiento del cuero natural, pero con ventajas tecnológicas como tacto suave y mejor control, elasticidad y rebote, resistencia al agua y alta durabilidad*).
 
 Tamaño N.º 5.
 
