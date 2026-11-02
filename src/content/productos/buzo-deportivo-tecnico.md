@@ -1,29 +1,31 @@
 ---
-title: Buzo Deportivo Técnico
-categoria: ropa
-subcategoria: Buzos
-precio: 34900
+title: Pelota de futbol termosellada P.U. Texturado
+categoria: accesorios
+subcategoria: Pelotas termoselladas
+precio: 36000
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-14.webp
-descripcion: Buzo abrigado y liviano, perfecto para pre y post entreno.
----
+imagen: /uploads/kicker-naranja-1-.jpg
+descripcion: >+
+  Pelota de fútbol de excelente calidad, fabricada en PU (poliuretano) con
+  superficie texturada y tecnología termosellada, ideal para la práctica de
+  fútbol 11.
 
+
+  Su diseño ofrece una excelente terminación, buen tacto y resistencia, brindando un gran rendimiento durante el juego.
+---
 ## Descripción completa
 
-**Buzo Deportivo Técnico** de alta calidad, ideal para Indumentaria deportiva cómoda y de calidad para entrenar y jugar.
+**Características del producto:**
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Material: PU (poliuretano).
 
-### Uso recomendado
+Tecnología de fabricación: termosellada.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Superficie texturada.
 
-### Contenido de la caja
+Tamaño N.º 5.
 
-- 1 x Buzo Deportivo Técnico
-- Manual de uso y cuidados
-- Accesorios incluidos
+Peso y dimensiones reglamentarias.
 
+Colores disponibles: azul y naranja.
