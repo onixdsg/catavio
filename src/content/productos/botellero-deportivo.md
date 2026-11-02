@@ -1,29 +1,29 @@
 ---
-title: Botellero Deportivo
+title: Pelota futbol de cuero vaqueta
 categoria: accesorios
-subcategoria: Botelleros
-precio: 5800
+subcategoria: Pelotas de cuero vaqueta
+precio: 46990
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-12.webp
-descripcion: Botellero ajustable para llevar tu bebida a todos lados.
+imagen: /uploads/cuero-vaqueta.jpg
+descripcion: >+
+  Pelota de fútbol en cuero vaqueta oficial, tamaño N.º 5, ideal para fútbol 11.
+  Fabricada en cuero, cuenta con peso y medidas reglamentarias, ofreciendo una
+  excelente opción para quienes buscan calidad y estilo. 
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
+Cuero vaqueta
 
-**Botellero Deportivo** de alta calidad, ideal para Complementos para mejorar tu juego y entreno.
+Tamaño N.º 5.
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Peso y medidas reglamentarias para fútbol 11.
 
-### Uso recomendado
+Confeccionada y cocida a mano.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Permite reparaciones y reemplazo de cámara.
 
-### Contenido de la caja
-
-- 1 x Botellero Deportivo
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en un único color blanco con distintas serigrafias.
