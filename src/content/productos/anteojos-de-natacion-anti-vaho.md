@@ -1,12 +1,12 @@
 ---
 title: Pelota de cuero oficial retro
 categoria: accesorios
-subcategoria: "pelota de futbol cuero retro "
+subcategoria: "pelota cuero retro "
 precio: 44000
 destacado: true
 stock: disponible
 imagen: /uploads/_cuero-oficial.jpg
-descripcion: >+
+descripcion: >
   Pelota de fútbol retro oficial, tamaño N.º 5, ideal para fútbol 11. Fabricada
   en cuero, cuenta con peso y medidas reglamentarias, ofreciendo una excelente
   opción para quienes buscan calidad y el estilo clásico del fútbol.
