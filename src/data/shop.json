@@ -5,23 +5,23 @@
   "simbolo": "$",
   "empresa": "Catavio Sport",
   "abreviatura": "Cs",
-  "descripcion": "Tienda de artículos deportivos al por mayor en Villa María, Córdoba.\nPelotas , Calzado y accesorios para todas las disciplinas, con atención personalizada y los mejores precios.",
+  "descripcion": "Tienda de artículos deportivos al por mayor en Villa María, Córdoba.\nPelotas , calzado y accesorios con atención personalizada y los mejores precios.",
   "horarios": "De 8:00 a 19:00 hs",
   "whatsapp": "5493534772685",
   "moneda": "ARS",
-  "email": "catavio.sport@gmail.com",
-  "redes": {
-    "instagram": "",
-    "facebook": ""
-  },
-  "sobre_titulo": "Sobre Catavio Sport",
   "sobre_textos": [
-    "Somos una tienda de artículos deportivos de Villa María, Córdoba. Trabajamos con las mejores marcas para que encuentres ropa, calzado y accesorios para tu disciplina, sea fútbol, running, gimnasio o vida al aire libre.",
-    "Te asesoramos a la hora de elegir, atendemos tu pedido por WhatsApp y coordinamos entrega como prefieras. Tu próxima marca personal arranca acá."
+    "¡Bienvenidos a nuestra tienda!\nSomos una tienda virtual mayorista de artículos deportivos ubicada en Villa María, Córdoba. Trabajamos con el compromiso de ofrecerte productos de excelente calidad a precios competitivos, acercándote las mejores opciones para que puedas potenciar tu negocio.\n\nNos especializamos en la comercialización de pelotas de fútbol, básquet y vóley, y medias deportivas ofreciendo variedad, calidad y excelentes oportunidades de compra por mayor.\n\nNuestro objetivo es brindarte una experiencia de compra simple, segura y confiable, con productos que combinan calidad, rendimiento y buenos precios.\n\n¡Somos tu aliado en artículos deportivos!",
+    "Te asesoramos a la hora de elegir, atendemos tu pedido por WhatsApp y coordinamos entrega de acuerdo a tu preferencia. Tu próxima marca personal arranca acá."
   ],
   "sobre_items": [
     "Marcas de equipamiento deportivo",
     "Atención personalizada y asesoramiento",
     "Envíos y coordinación por WhatsApp"
-  ]
+  ],
+  "email": "catavio.sport@gmail.com",
+  "sobre_titulo": "Sobre Catavio Sport Mayorista",
+  "redes": {
+    "instagram": "",
+    "facebook": ""
+  }
 }
