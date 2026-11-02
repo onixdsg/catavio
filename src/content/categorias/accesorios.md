@@ -8,6 +8,8 @@ subcategorias:
   - "Pelotas de sintético "
   - "Pelotas importadas cocidas a máquina "
   - Pelotas termoselladas
+  - Pelota de futbol 5 (medio pique) cuero vaqueta
+  - Pelota de futbol 5 (medio pique) P.U.
   - Pelota N3
 descripcion: >-
   Ofrecemos pelotas de fútbol de excelente calidad, diseñadas para brindar un
