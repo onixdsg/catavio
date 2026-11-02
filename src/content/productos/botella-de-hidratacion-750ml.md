@@ -1,29 +1,29 @@
 ---
-title: Botella de Hidratación 750ml
-categoria: running
-subcategoria: Hidratación
-precio: 7900
+title: "Pelota P.U. estilo Champions "
+categoria: accesorios
+subcategoria: Pelotas de P.U.
+precio: 32570
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-11.webp
-descripcion: Botella deportiva sin BPA con boquilla de flujo rápido.
+imagen: /uploads/champion-.jpg
+descripcion: >+
+  Pelota de fútbol  de P.U. oficial, tamaño N.º 5, ideal para fútbol 11.
+  Fabricada en P.U. (poliuretano), cuenta con peso y medidas reglamentarias,
+  ofreciendo una excelente opción para quienes buscan calidad y durabilidad. 
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
 
-**Botella de Hidratación 750ml** de alta calidad, ideal para Ropa técnica, hidratación y accesorios para correr.
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Tamaño N.º 5.
 
-### Uso recomendado
+Peso y medidas reglamentarias para fútbol 11.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Confeccionada y cocida a mano.
 
-### Contenido de la caja
+Permite reparaciones y reemplazo de cámara.
 
-- 1 x Botella de Hidratación 750ml
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en un único color.
