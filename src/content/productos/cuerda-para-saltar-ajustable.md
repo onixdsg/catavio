@@ -6,7 +6,10 @@ precio: 24990
 destacado: false
 stock: disponible
 imagen: /uploads/puma-blanca-1.jpg
-descripcion: >+
+galeria:
+  - /uploads/pvc.jpg
+  - /uploads/pvc-tipo-nassau.jpg
+descripcion: >
   Pelota de fútbol  de PVC oficial, tamaño N.º 5, ideal para fútbol 11.
   Fabricada en PVC cuenta con peso y medidas reglamentarias, ofreciendo una
   excelente opción para quienes buscan calidad y durabilidad. 
