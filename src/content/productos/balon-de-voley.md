@@ -1,31 +1,31 @@
 ---
-title: Balón de Vóley
-categoria: pelotas
-subcategoria: Vóley
-precio: 14900
+title: Pelota de P.U. estillo AFA
+categoria: accesorios
+subcategoria: Pelotas de P.U.
+precio: 32570
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-9.webp
+imagen: /uploads/afa.jpg
 galeria:
   - /images/pelotas2/pelota2-10.webp
-descripcion: Balón de vóley con cuero sintético y buena retención de aire.
+descripcion: >
+  Pelota de fútbol P.U., tamaño N.º 5, ideal para fútbol 11. Fabricada en P.U.
+  (poliuretano), cuenta con peso y medidas reglamentarias, ofreciendo una
+  excelente opción para quienes buscan calidad. 
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
+Pelota P.U estilo AFA (*a diferencia de otros materiales, el poliuretano ofrece características muy superiores que imitan el comportamiento del cuero natural, pero con ventajas tecnológicas como tacto suave y mejor control, elasticidad y rebote, resistencia al agua y alta durabilidad*). 
 
-**Balón de Vóley** de alta calidad, ideal para Pelotas de fútbol, vóley, básquet y más.
+Tamaño N.º 5.
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Peso y medidas reglamentarias para fútbol 11.
 
-### Uso recomendado
+Confeccionada y cocida a mano.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Permite reparaciones y reemplazo de cámara.
 
-### Contenido de la caja
-
-- 1 x Balón de Vóley
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en un único color.

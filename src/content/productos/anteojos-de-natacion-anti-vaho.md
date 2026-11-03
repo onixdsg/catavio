@@ -1,29 +1,29 @@
 ---
-title: Anteojos de Natación Anti-vaho
-categoria: natacion
-subcategoria: Anteojos
-precio: 8900
+title: Pelota de cuero oficial retro
+categoria: accesorios
+subcategoria: "pelota cuero retro "
+precio: 44000
 destacado: true
 stock: disponible
-imagen: /images/pelotas2/pelota2-8.webp
-descripcion: Anteojos de natación con protección UV y ajuste cómodo.
+imagen: /uploads/_cuero-oficial.jpg
+descripcion: >
+  Pelota de fútbol retro oficial, tamaño N.º 5, ideal para fútbol 11. Fabricada
+  en cuero, cuenta con peso y medidas reglamentarias, ofreciendo una excelente
+  opción para quienes buscan calidad y el estilo clásico del fútbol.
+
+
+  Su confección cocida a mano permite realizar reparaciones, como emparchar, reemplazar la cámara y volver a coserla, prolongando así su vida útil.
 ---
+**Características del producto:**
 
-## Descripción completa
+Modelo retro de cuero.
 
-**Anteojos de Natación Anti-vaho** de alta calidad, ideal para Trajes, anteojos y gorras para entrenar en el agua.
+Tamaño N.º 5.
 
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
+Peso y medidas reglamentarias para fútbol 11.
 
-### Uso recomendado
+Confeccionada y cocida a mano.
 
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
+Permite reparaciones y reemplazo de cámara.
 
-### Contenido de la caja
-
-- 1 x Anteojos de Natación Anti-vaho
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+Disponible en un único color.
