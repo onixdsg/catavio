@@ -109,7 +109,6 @@ export function initCatalog() {
         break;
     }
 
-    state.page = 1;
     return out;
   }
 
@@ -210,6 +209,7 @@ export function initCatalog() {
         state.subcategory = 'all';
         fillSubcategories();
       }
+      state.page = 1;
       render();
     });
     ctl.addEventListener('change', () => {
@@ -219,6 +219,7 @@ export function initCatalog() {
         state.subcategory = 'all';
         fillSubcategories();
       }
+      state.page = 1;
       render();
     });
   });
@@ -239,6 +240,7 @@ export function initCatalog() {
       if (min) min.value = '';
       if (max) max.value = '';
       if (sort) sort.value = 'recomendados';
+      state.page = 1;
       fillCategories();
       fillSubcategories();
       render();
