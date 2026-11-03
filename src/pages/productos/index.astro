@@ -121,17 +121,31 @@ const initial = index.slice(0, 12);
       }
     </div>
 
-    <!-- Cargar más -->
-    <div class="mt-10 text-center" data-catalog-more hidden>
-      <button
-        type="button"
-        data-catalog-load
-        class="px-8 py-3 rounded-lg border border-brand-600 text-brand-400 font-semibold hover:bg-brand-600/10 transition"
-      >
-        Cargar más
-        <span class="text-brand-500" data-catalog-remaining>0</span> productos
-      </button>
-    </div>
+    <!-- Paginación -->
+    <nav
+      data-catalog-pagination
+      class="mt-10 flex flex-col sm:flex-row items-center justify-between gap-4"
+      aria-label="Paginación de productos"
+    >
+      <p data-catalog-page-info class="text-slate-400 text-sm"></p>
+      <div class="flex items-center gap-2" data-catalog-page-controls>
+        <button
+          type="button"
+          data-catalog-prev
+          class="px-4 py-2 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none transition"
+        >
+          Anterior
+        </button>
+        <div data-catalog-page-numbers class="flex gap-1"></div>
+        <button
+          type="button"
+          data-catalog-next
+          class="px-4 py-2 rounded-lg border border-slate-700 text-slate-300 hover:bg-slate-800 disabled:opacity-50 disabled:pointer-events-none transition"
+        >
+          Siguiente
+        </button>
+      </div>
+    </nav>
   </section>
 
   <script is:inline define:vars={{ index }}>

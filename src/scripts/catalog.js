@@ -11,13 +11,12 @@ export function initCatalog() {
     min: '',
     max: '',
     sort: 'recomendados',
-    visible: PAGE_SIZE,
+    page: 1,
   };
 
   const grid = document.querySelector('[data-catalog-grid]');
   const countEl = document.querySelector('[data-catalog-count]');
   const emptyEl = document.querySelector('[data-catalog-empty]');
-  const loadMoreBtn = document.querySelector('[data-catalog-more]');
   const subSelect = document.querySelector('[data-filter-subcategory]');
   const catSelect = document.querySelector('[data-filter-category]');
 
@@ -110,7 +109,7 @@ export function initCatalog() {
         break;
     }
 
-    state.visible = PAGE_SIZE;
+    state.page = 1;
     return out;
   }
 
@@ -153,17 +152,53 @@ export function initCatalog() {
     if (total === 0) {
       grid.innerHTML = '';
       emptyEl?.classList.remove('hidden');
-      if (loadMoreBtn) loadMoreBtn.classList.add('hidden');
       return;
     }
     emptyEl?.classList.add('hidden');
 
-    const slice = filtered.slice(0, state.visible);
+    const start = (state.page - 1) * PAGE_SIZE;
+    const slice = filtered.slice(start, start + PAGE_SIZE);
     grid.innerHTML = slice.map(card).join('');
-    if (loadMoreBtn) {
-      loadMoreBtn.classList.toggle('hidden', state.visible >= total);
-      loadMoreBtn.querySelector('[data-catalog-remaining]').textContent =
-        total - state.visible;
+    renderPagination(total, start);
+  }
+
+  function renderPagination(total, start) {
+    const pageInfo = document.querySelector('[data-catalog-page-info]');
+    const controls = document.querySelector('[data-catalog-page-controls]');
+    const numbers = document.querySelector('[data-catalog-page-numbers]');
+
+    const totalPages = Math.ceil(total / PAGE_SIZE) || 1;
+    if (state.page > totalPages) state.page = totalPages;
+
+    if (pageInfo) {
+      const from = total === 0 ? 0 : start + 1;
+      const to = Math.min(start + PAGE_SIZE, total);
+      pageInfo.textContent = `Mostrando ${from} a ${to} de ${total} producto${total === 1 ? '' : 's'}`;
+    }
+
+    const prevBtn = document.querySelector('[data-catalog-prev]');
+    const nextBtn = document.querySelector('[data-catalog-next]');
+    if (prevBtn) prevBtn.disabled = state.page <= 1;
+    if (nextBtn) nextBtn.disabled = state.page >= totalPages;
+
+    if (controls) controls.hidden = totalPages <= 1;
+    if (!numbers) return;
+
+    numbers.innerHTML = '';
+    for (let i = 1; i <= totalPages; i++) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.textContent = String(i);
+      btn.className = `px-3 py-2 rounded-lg text-sm ${
+        i === state.page
+          ? 'bg-brand-600 text-white'
+          : 'border border-slate-700 text-slate-300 hover:bg-slate-800'
+      }`;
+      btn.addEventListener('click', () => {
+        state.page = i;
+        render();
+      });
+      numbers.appendChild(btn);
     }
   }
 
@@ -210,10 +245,25 @@ export function initCatalog() {
     });
   });
 
-  loadMoreBtn?.addEventListener('click', () => {
-    state.visible += PAGE_SIZE;
-    render();
-  });
+  const prevBtn = document.querySelector('[data-catalog-prev]');
+  const nextBtn = document.querySelector('[data-catalog-next]');
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      if (state.page > 1) {
+        state.page -= 1;
+        render();
+      }
+    });
+  }
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      const totalPages = Math.ceil(products.length / PAGE_SIZE) || 1;
+      if (state.page < totalPages) {
+        state.page += 1;
+        render();
+      }
+    });
+  }
 
   fillCategories();
   fillSubcategories();
