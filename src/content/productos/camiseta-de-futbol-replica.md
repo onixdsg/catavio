@@ -5,7 +5,7 @@ subcategoria: Pelota de P.U.
 precio: 32570
 destacado: false
 stock: disponible
-imagen: https://drive.google.com/drive/u/0/folders/1pY3i6enQoLWdmr78F-7oCFusNxU2GuqC
+imagen: /uploads/nassau-pro-.jpg
 descripcion: >
   Pelota de fútbol  de P.U. oficial, tamaño N.º 5, ideal para fútbol 11.
   Fabricada en P.U. (poliuretano), cuenta con peso y medidas reglamentarias,
