@@ -1,11 +1,11 @@
 ---
-title: "Pelota P.U. estilo Champions "
+title: Pelota P.U. estilo Ch@mpion
 categoria: accesorios
 subcategoria: Pelotas de P.U.
 precio: 32570
 destacado: false
 stock: disponible
-imagen: /uploads/champion-.jpg
+imagen: /uploads/champion-sin-logo.jpg
 descripcion: >
   Pelota de fútbol  de P.U. oficial, tamaño N.º 5, ideal para fútbol 11.
   Fabricada en P.U. (poliuretano), cuenta con peso y medidas reglamentarias,
