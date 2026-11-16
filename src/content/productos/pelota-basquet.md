@@ -5,9 +5,8 @@ subcategoria: "Pelotas de basquet disponibles en N3 , N5 , N7 "
 precio: 17200
 destacado: false
 stock: disponible
-imagen: /images/pelotas3/basquet.webp
-galeria:
-  - /images/pelotas3/basquet.webp
+imagen: /uploads/basquet-editada-1-.jpg
+galeria: []
 descripcion: Pelota deportiva de calidad.
 ---
 ## Descripción completa
