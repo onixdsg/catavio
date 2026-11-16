@@ -3,7 +3,7 @@ title: Pelota P.U. estilo Ch@mpion
 categoria: accesorios
 subcategoria: Pelotas de P.U.
 precio: 32570
-destacado: false
+destacado: true
 stock: disponible
 imagen: /uploads/champion-sin-logo.jpg
 descripcion: >
