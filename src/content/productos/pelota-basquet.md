@@ -2,7 +2,7 @@
 title: Pelota Basquet
 categoria: pelotas
 subcategoria: "Pelotas de basquet  en N3 , N5 , N7 "
-precio: 17
+precio: 17000
 destacado: false
 stock: disponible
 imagen: /images/pelotas3/basquet.webp
