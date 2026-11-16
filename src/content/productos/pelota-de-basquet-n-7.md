@@ -9,22 +9,4 @@ imagen: /uploads/basquet-editada-1-.jpg
 galeria: []
 descripcion: Pelota de básquet reforzada para piso de madera o cemento.
 ---
-
-## Descripción completa
-
-**Pelota de Básquet N°7** de alta calidad, ideal para Pelotas de fútbol, vóley, básquet y más.
-
-- Acabado profesional
-- Garantía por escrito
-- Consulte stock y variedad
-
-### Uso recomendado
-
-Perfecto para entrenamiento y práctica deportiva. Fácil de usar y mantener.
-
-### Contenido de la caja
-
-- 1 x Pelota de Básquet N°7
-- Manual de uso y cuidados
-- Accesorios incluidos
-
+**Pelota de Básquet N°7** de alta calidad material sintético con grip.
