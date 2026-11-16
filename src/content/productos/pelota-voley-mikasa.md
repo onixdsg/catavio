@@ -1,10 +1,10 @@
 ---
 title: Pelota Voley Mikasa
-categoria: pelotas
-precio: 1000
-destacado: false
+categoria: pelotas-de-voley
+precio: 32000
+destacado: true
 stock: disponible
-imagen: /images/pelotas3/voley-mikasa.webp
+imagen: /uploads/voley-mikasa-sin-logo-1-.jpg
 galeria:
   - /images/pelotas3/voley-mikasa.webp
 descripcion: Pelota deportiva de calidad.
