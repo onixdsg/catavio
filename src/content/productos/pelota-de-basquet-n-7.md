@@ -5,9 +5,8 @@ subcategoria: Básquet
 precio: 16900
 destacado: false
 stock: disponible
-imagen: /images/pelotas2/pelota2-21.webp
-galeria:
-  - /images/pelotas2/pelota2-22.webp
+imagen: /uploads/basquet-editada-1-.jpg
+galeria: []
 descripcion: Pelota de básquet reforzada para piso de madera o cemento.
 ---
 
