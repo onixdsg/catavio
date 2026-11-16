@@ -1,5 +1,5 @@
 ---
-title: Pelota Voley Mikasa
+title: Pelota Voley simil Micasa
 categoria: pelotas-de-voley
 precio: 32000
 destacado: true
