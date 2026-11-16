@@ -1,10 +1,10 @@
 ---
-title: Pelota Voley Official
-categoria: pelotas
-precio: 1000
+title: Pelota Voley supersoft
+categoria: pelotas-de-voley
+precio: 23000
 destacado: false
 stock: disponible
-imagen: /images/pelotas3/voley-official.webp
+imagen: /uploads/voley-supersoft-sin-logo-.jpg
 galeria:
   - /images/pelotas3/voley-official.webp
 descripcion: Pelota deportiva de calidad.
