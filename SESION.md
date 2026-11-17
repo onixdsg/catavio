@@ -212,3 +212,41 @@ a493e57 Agrego widget de Netlify Identity para aceptar invitaciones del panel /a
 - [ ] Completar `redes.instagram` y `redes.facebook` en `src/data/shop.json`.
 - [ ] (Idea) Procesar también `public/uploads/` (fotos que suba el cliente por el CMS) con el script de optimización.
 - [ ] (Idea) Analytics: Netlify free guarda solo 1 día → sumar Cloudflare Web Analytics (gratis, sin cookies) para ver tendencias mensuales.
+
+## 13. Sesión de trabajo — Paginación + productos de pelotas + merge con panel (2026-11-17)
+
+### Qué se hizo
+
+1. **Paginación de productos (12 por página)** — commits `ab43043` y `653d488`:
+   - `src/pages/productos/index.astro`: reemplazó botón "Cargar más" por controles Anterior / números de página / Siguiente.
+   - `src/scripts/catalog.js`: estado `page` en lugar de `visible`, corte de 12 por página, render de controles.
+   - **Fix crítico** (`653d488`): `applyFilters()` reseteaba `state.page = 1` en cada `render()`, impidiendo pasar a la página 2. Se movió el reset solo a handlers de filtros (búsqueda, categoría, precio, reset).
+
+2. **Importación de 18 productos de pelotas** — commit `e2c215e`:
+   - Origen: carpeta local `pelotas para catalogo/` (18 imágenes JPG).
+   - Imágenes optimizadas a WebP (640px, q58) en `public/images/pelotas3/`.
+   - Productos creados en `src/content/productos/` con precio `$1.000`, categoría `pelotas`, sin subcategoría.
+   - Incluía `pelota-voley-supersoft` (pedido específico).
+
+3. **Merge con cambios del panel administrador (Opción A)** — commit `c7b03dd`:
+   - Trajo cambios del remoto `322dfbd` (panel Decap CMS).
+   - Borró categorías `pelotas.md` y `calzado.md`.
+   - Creó categorías `pelotas-de-basquet.md` y `pelotas-de-voley.md`.
+   - Subió imágenes "sin-logo" a `public/uploads/`.
+   - **Borró 13 productos** de los 18 recién importados (incluyendo `pelota-voley-supersoft`), quedando 7 productos nuevos de los 18.
+   - Resultado final: 25 productos en el catálogo.
+
+### Estado actual
+
+- Rama `main` local y remoto en commit `c7b03dd`.
+- Push a GitHub exitoso → Netlify desplegará automáticamente.
+- Build local: `npx astro check` 0 errores, `npm run build` 25 páginas generadas.
+- Backup en rama `backup-antes-paginacion` (estado antes de paginación).
+- Rama `trabajo-paginacion` fusionada en `main`.
+
+### Pendiente / notas
+
+- Verificar que Netlify desplegó `c7b03dd` en `https://app.netlify.com` → catavio → Deploys.
+- El producto "voley supersoft" y otros 10 productos nuevos se **perdieron** con el merge Opción A (borrados por el panel). Si el cliente los quiere, hay que recrearlos.
+- Las nuevas categorías del panel son `pelotas-de-basquet` y `pelotas-de-voley` (no `pelotas`). Los productos restantes usan esas categorías o ninguna.
+- Pendientes previos de SESION.md siguen vigentes (fotos reales, email, redes, optimizar uploads, analytics).
