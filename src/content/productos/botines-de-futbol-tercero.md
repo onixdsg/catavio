@@ -3,9 +3,9 @@ title: Pelota de futbol 5 cuero vaqueta
 categoria: accesorios
 subcategoria: Pelota de futbol 5 cuero vaqueta
 precio: 46990
-destacado: false
+destacado: true
 stock: disponible
-imagen: /uploads/futbol-5.jpg
+imagen: /uploads/futbol-5-sin-logo-1-.jpg
 galeria:
   - /uploads/molino.jpg
 descripcion: >

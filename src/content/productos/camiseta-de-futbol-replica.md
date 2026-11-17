@@ -1,11 +1,11 @@
 ---
-title: Pelota de futbol P.U. estilo Nassau
+title: Pelota de futbol P.U. estilo N@ss@u
 categoria: accesorios
 subcategoria: Pelota de P.U.
 precio: 32570
-destacado: false
+destacado: true
 stock: disponible
-imagen: /uploads/nassau-pro-.jpg
+imagen: /uploads/nassau-pro-sin-logo-1-.jpg
 descripcion: >
   Pelota de fútbol  de P.U. oficial, tamaño N.º 5, ideal para fútbol 11.
   Fabricada en P.U. (poliuretano), cuenta con peso y medidas reglamentarias,

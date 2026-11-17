@@ -5,8 +5,8 @@ subcategoria: Pelotas de cuero vaqueta
 precio: 46990
 destacado: false
 stock: disponible
-imagen: /uploads/cuero-vaqueta.jpg
-descripcion: >+
+imagen: /uploads/cuero-vaqueta-sin-logo.jpg
+descripcion: >
   Pelota de fútbol en cuero vaqueta oficial, tamaño N.º 5, ideal para fútbol 11.
   Fabricada en cuero, cuenta con peso y medidas reglamentarias, ofreciendo una
   excelente opción para quienes buscan calidad y estilo. 

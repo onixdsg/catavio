@@ -1,10 +1,10 @@
 ---
-title: Pelota Voley Tricolor Mikasa
-categoria: pelotas
-precio: 1000
+title: "Pelota Voley Tricolor "
+categoria: pelotas-de-voley
+precio: 17000
 destacado: false
 stock: disponible
-imagen: /images/pelotas3/voley-tricolor-mikasa.webp
+imagen: /uploads/voley-penalty-sin-logo-1-.jpg
 galeria:
   - /images/pelotas3/voley-tricolor-mikasa.webp
 descripcion: Pelota deportiva de calidad.

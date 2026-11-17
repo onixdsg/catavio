@@ -1,5 +1,5 @@
 ---
-title: Pelota de futbol P.U. estilo Penalty
+title: Pelota de futbol P.U. estilo Pen@lti
 categoria: accesorios
 subcategoria: Pelotas de futbol P.U.
 precio: 32570
